@@ -1,0 +1,1994 @@
+1
+00:00:00,000 --> 00:00:01,380
+We're going to look at
+
+2
+00:00:01,380 --> 00:00:03,615
+logic in this first
+part of the course.
+
+3
+00:00:03,615 --> 00:00:05,250
+And the first thing
+to do is to work
+
+4
+00:00:05,250 --> 00:00:07,350
+out what logic might be.
+
+5
+00:00:07,350 --> 00:00:08,880
+Philosophers are worried about
+
+6
+00:00:08,880 --> 00:00:10,965
+that ever since the
+ancient Greeks,
+
+7
+00:00:10,965 --> 00:00:14,055
+one way of looking at
+the modern view of logic
+
+8
+00:00:14,055 --> 00:00:17,235
+from the point of view of a
+philosopher is read as book,
+
+9
+00:00:17,235 --> 00:00:19,110
+Language, Truth, and Logic.
+
+10
+00:00:19,110 --> 00:00:20,820
+If you start worrying,
+what does all this mean?
+
+11
+00:00:20,820 --> 00:00:23,565
+How do we fit with the way
+we speak with the world?
+
+12
+00:00:23,565 --> 00:00:26,430
+And you start thinking
+philosophically, get that book,
+
+13
+00:00:26,430 --> 00:00:27,960
+you'll find it second hand all
+
+14
+00:00:27,960 --> 00:00:29,730
+over the place because
+it's been around for
+
+15
+00:00:29,730 --> 00:00:31,260
+a long time and many millions of
+
+16
+00:00:31,260 --> 00:00:33,810
+students have ready
+Language, Truth, and Logic.
+
+17
+00:00:33,810 --> 00:00:36,730
+We're not going to take
+things quite in that order.
+
+18
+00:00:36,730 --> 00:00:39,260
+We're going to start with truth,
+
+19
+00:00:39,260 --> 00:00:42,335
+very simple world where
+we know what's true.
+
+20
+00:00:42,335 --> 00:00:47,109
+And then we'll do some
+logic with that world.
+
+21
+00:00:47,109 --> 00:00:49,040
+With worlds like that,
+
+22
+00:00:49,040 --> 00:00:52,025
+without talking about
+language for the moment.
+
+23
+00:00:52,025 --> 00:00:55,220
+Forget everything you
+may have learned about
+
+24
+00:00:55,220 --> 00:00:58,400
+Boolean algebra or logic,
+
+25
+00:00:58,400 --> 00:01:03,095
+and just think about things
+and the way they behave.
+
+26
+00:01:03,095 --> 00:01:06,290
+Now, why are we
+doing this course?
+
+27
+00:01:06,290 --> 00:01:10,175
+Part of it is because there
+is some technical stuff
+
+28
+00:01:10,175 --> 00:01:13,880
+that you need in
+doing informatics,
+
+29
+00:01:13,880 --> 00:01:16,310
+computation, writing
+programs, designing
+
+30
+00:01:16,310 --> 00:01:19,715
+machines that some technical
+logic that you need.
+
+31
+00:01:19,715 --> 00:01:22,550
+But over and above that,
+
+32
+00:01:22,550 --> 00:01:24,830
+we'll see that when
+we say things in
+
+33
+00:01:24,830 --> 00:01:28,610
+English, it's often imprecise.
+
+34
+00:01:28,610 --> 00:01:31,610
+So one of the things you
+should learn from this course
+
+35
+00:01:31,610 --> 00:01:35,885
+is where some of those
+imprecisions may lie.
+
+36
+00:01:35,885 --> 00:01:38,960
+And you may learn to actually
+
+37
+00:01:38,960 --> 00:01:42,215
+say things more clearly,
+more precisely.
+
+38
+00:01:42,215 --> 00:01:43,940
+And that will really help you
+
+39
+00:01:43,940 --> 00:01:46,130
+because often not
+just in this course,
+
+40
+00:01:46,130 --> 00:01:48,080
+but throughout your course.
+
+41
+00:01:48,080 --> 00:01:51,260
+You'll be asked for
+a definition of
+
+42
+00:01:51,260 --> 00:01:52,850
+something or to explain
+
+43
+00:01:52,850 --> 00:01:55,085
+why one thing follows
+from another.
+
+44
+00:01:55,085 --> 00:01:58,570
+And although you won't use
+formal logic to do that,
+
+45
+00:01:58,570 --> 00:02:00,290
+some of the ways of expressing
+
+46
+00:02:00,290 --> 00:02:02,285
+yourself that you learn
+through the formal logic.
+
+47
+00:02:02,285 --> 00:02:03,560
+To do that, you should
+
+48
+00:02:03,560 --> 00:02:05,075
+learn from this
+course and skills a
+
+49
+00:02:05,075 --> 00:02:08,360
+clear, concise,
+unambiguous communication.
+
+50
+00:02:08,360 --> 00:02:10,610
+As I said, we're going to
+look at very simple thing.
+
+51
+00:02:10,610 --> 00:02:16,340
+Three, we had a big blue
+triangle and the small red this.
+
+52
+00:02:16,340 --> 00:02:19,310
+We're going to talk about
+finite universities,
+
+53
+00:02:19,310 --> 00:02:20,765
+so we call it the universe.
+
+54
+00:02:20,765 --> 00:02:22,460
+It's everything. But that just
+
+55
+00:02:22,460 --> 00:02:24,560
+means it's everything
+we're going to talk about.
+
+56
+00:02:24,560 --> 00:02:26,450
+So our universe is
+going to be very
+
+57
+00:02:26,450 --> 00:02:28,460
+small with just a few things.
+
+58
+00:02:28,460 --> 00:02:31,355
+And we'll start off
+with this example.
+
+59
+00:02:31,355 --> 00:02:33,695
+Nine shapes.
+
+60
+00:02:33,695 --> 00:02:37,010
+How would you describe
+those shapes?
+
+61
+00:02:37,010 --> 00:02:40,770
+Previous slide was a
+hint. What's this?
+
+62
+00:02:41,430 --> 00:02:44,260
+It's a small blue triangle, okay,
+
+63
+00:02:44,260 --> 00:02:47,635
+and this is a large green disc,
+
+64
+00:02:47,635 --> 00:02:49,645
+local disks and triangles.
+
+65
+00:02:49,645 --> 00:02:52,180
+Here are some things we might
+
+66
+00:02:52,180 --> 00:02:55,299
+want to say about those things.
+
+67
+00:02:55,299 --> 00:03:00,715
+Which of those are true and
+which of them are false?
+
+68
+00:03:00,715 --> 00:03:04,850
+Cause the video for a moment
+and decide for yourself.
+
+69
+00:03:05,070 --> 00:03:07,360
+Then you won't have any problem
+
+70
+00:03:07,360 --> 00:03:10,300
+deciding which of those are
+true and which are false.
+
+71
+00:03:10,300 --> 00:03:13,930
+Can somebody give me an
+example of a false 1 second 1,
+
+72
+00:03:13,930 --> 00:03:17,290
+every small triangle is read.
+
+73
+00:03:17,290 --> 00:03:19,210
+Why that's not true,
+
+74
+00:03:19,210 --> 00:03:21,325
+because there's a
+blue small triangle.
+
+75
+00:03:21,325 --> 00:03:23,490
+I hope you can all.
+
+76
+00:03:23,490 --> 00:03:25,370
+Answer those questions.
+
+77
+00:03:25,370 --> 00:03:29,360
+What we're going to do
+today is to see how we
+
+78
+00:03:29,360 --> 00:03:34,250
+might program up in Haskell
+to answer these questions.
+
+79
+00:03:34,250 --> 00:03:35,765
+Before we get to that,
+
+80
+00:03:35,765 --> 00:03:38,765
+we'll talk a little bit about
+how we represent the world.
+
+81
+00:03:38,765 --> 00:03:43,760
+So the first thing we do is
+to give names for the things.
+
+82
+00:03:43,760 --> 00:03:46,910
+So I've labeled them RFT U,
+
+83
+00:03:46,910 --> 00:03:48,515
+V, W, X, Y, Z.
+
+84
+00:03:48,515 --> 00:03:51,185
+Okay, they've got
+names and the names
+
+85
+00:03:51,185 --> 00:03:54,305
+mean nothing when we
+use names for things.
+
+86
+00:03:54,305 --> 00:03:58,415
+It's not the same as saying
+the small green triangle.
+
+87
+00:03:58,415 --> 00:04:00,845
+It's just a name for that thing.
+
+88
+00:04:00,845 --> 00:04:05,465
+And one way of describing this
+world in Haskell would be,
+
+89
+00:04:05,465 --> 00:04:10,010
+first of all, to introduce
+an enumerated type.
+
+90
+00:04:10,010 --> 00:04:12,170
+That means we just
+list what's in it.
+
+91
+00:04:12,170 --> 00:04:13,715
+That's what enumerated means.
+
+92
+00:04:13,715 --> 00:04:19,205
+So this type thing has objects R,
+
+93
+00:04:19,205 --> 00:04:21,080
+S, T, U, V,
+
+94
+00:04:21,080 --> 00:04:22,685
+W X, Y, Z.
+
+95
+00:04:22,685 --> 00:04:25,400
+And if I just write it
+like that in Haskell,
+
+96
+00:04:25,400 --> 00:04:28,460
+that gives me a new
+type called thing.
+
+97
+00:04:28,460 --> 00:04:31,625
+And it gives me
+those nine things.
+
+98
+00:04:31,625 --> 00:04:34,700
+And then I need to first of
+all say thorough colors.
+
+99
+00:04:34,700 --> 00:04:37,070
+We have red, blue, and
+green that reshapes.
+
+100
+00:04:37,070 --> 00:04:39,980
+We have disks and
+triangles and their sizes.
+
+101
+00:04:39,980 --> 00:04:41,555
+We have begun small.
+
+102
+00:04:41,555 --> 00:04:45,455
+So we've just introduced
+three more types.
+
+103
+00:04:45,455 --> 00:04:48,290
+The same way they're
+enumerated types.
+
+104
+00:04:48,290 --> 00:04:51,350
+We just say, here's a thing
+and it's got these things.
+
+105
+00:04:51,350 --> 00:04:53,000
+And basically those
+are their names.
+
+106
+00:04:53,000 --> 00:04:56,750
+There's no meaning to
+red or blue or green.
+
+107
+00:04:56,750 --> 00:04:58,040
+It's just a name for
+
+108
+00:04:58,040 --> 00:04:59,585
+something that we're
+going to call a color.
+
+109
+00:04:59,585 --> 00:05:03,620
+What we're then going to do
+is to define some functions.
+
+110
+00:05:03,620 --> 00:05:05,660
+You see these objects we've
+
+111
+00:05:05,660 --> 00:05:08,764
+introduced all have
+capital letters.
+
+112
+00:05:08,764 --> 00:05:11,135
+They're what's
+called constructors.
+
+113
+00:05:11,135 --> 00:05:12,950
+When I write them down,
+
+114
+00:05:12,950 --> 00:05:15,680
+I'm writing down a
+name for something.
+
+115
+00:05:15,680 --> 00:05:17,750
+When I write
+something that begins
+
+116
+00:05:17,750 --> 00:05:20,360
+with a lowercase letter,
+
+117
+00:05:20,360 --> 00:05:24,650
+then that's a variable
+which could take values.
+
+118
+00:05:24,650 --> 00:05:28,580
+Here we're going
+to define color to
+
+119
+00:05:28,580 --> 00:05:33,050
+be a function from
+things to colors,
+
+120
+00:05:33,050 --> 00:05:36,020
+and shape, to be a function
+
+121
+00:05:36,020 --> 00:05:38,660
+from things to shapes and sizes,
+
+122
+00:05:38,660 --> 00:05:41,750
+to be a function from
+things to the sizes.
+
+123
+00:05:41,750 --> 00:05:46,295
+So how would we define
+that? Very easily?
+
+124
+00:05:46,295 --> 00:05:47,600
+We just list things.
+
+125
+00:05:47,600 --> 00:05:49,415
+So for instance, I'll do color.
+
+126
+00:05:49,415 --> 00:05:51,770
+It's the most complicated one.
+
+127
+00:05:51,770 --> 00:05:55,790
+The function, the
+function from things,
+
+128
+00:05:55,790 --> 00:05:59,705
+the colors, the types in
+Haskell are all important.
+
+129
+00:05:59,705 --> 00:06:01,940
+They tell you what
+you can do with
+
+130
+00:06:01,940 --> 00:06:04,460
+things and they can tell
+you what things do.
+
+131
+00:06:04,460 --> 00:06:06,650
+So always look at the type.
+
+132
+00:06:06,650 --> 00:06:11,390
+Color is a function of
+type, thing to color.
+
+133
+00:06:11,390 --> 00:06:17,555
+Shall I say that the color
+of our color is green,
+
+134
+00:06:17,555 --> 00:06:20,285
+the color of S is green,
+
+135
+00:06:20,285 --> 00:06:21,995
+the color is blue.
+
+136
+00:06:21,995 --> 00:06:24,890
+This just lists all the things
+
+137
+00:06:24,890 --> 00:06:26,465
+and says what colors they have.
+
+138
+00:06:26,465 --> 00:06:29,194
+One thing I haven't
+said about logic
+
+139
+00:06:29,194 --> 00:06:35,330
+is we don't want a logic
+for talking about shapes.
+
+140
+00:06:35,330 --> 00:06:38,750
+We don't want the logic
+for talking about animals.
+
+141
+00:06:38,750 --> 00:06:41,105
+We want logic that
+
+142
+00:06:41,105 --> 00:06:44,120
+works when we don't even know
+what we're talking about.
+
+143
+00:06:44,120 --> 00:06:45,530
+Sometimes you don't know
+what you're talking about,
+
+144
+00:06:45,530 --> 00:06:48,110
+but at least you can reason
+if you know some facts.
+
+145
+00:06:48,110 --> 00:06:51,860
+You can make deductions
+logically without
+
+146
+00:06:51,860 --> 00:06:53,570
+knowing the details of what
+
+147
+00:06:53,570 --> 00:06:55,655
+these things are,
+how they're made.
+
+148
+00:06:55,655 --> 00:06:57,485
+And that's called abstraction.
+
+149
+00:06:57,485 --> 00:07:00,260
+You've come away and you just
+look at some properties and
+
+150
+00:07:00,260 --> 00:07:01,850
+you reason about them without
+
+151
+00:07:01,850 --> 00:07:03,575
+necessarily knowing
+everything else.
+
+152
+00:07:03,575 --> 00:07:06,260
+The word logic comes from logos.
+
+153
+00:07:06,260 --> 00:07:11,120
+Ology is used for nouns
+denoting study of something.
+
+154
+00:07:11,120 --> 00:07:13,400
+What we want to do is throw
+away the things that we're
+
+155
+00:07:13,400 --> 00:07:16,535
+reasoning about and just
+talk about what's left.
+
+156
+00:07:16,535 --> 00:07:18,215
+So how do we do that?
+
+157
+00:07:18,215 --> 00:07:20,150
+We look again at this model.
+
+158
+00:07:20,150 --> 00:07:23,420
+Instead of saying, what's
+the color of this,
+
+159
+00:07:23,420 --> 00:07:26,885
+we're going to say
+this has the property.
+
+160
+00:07:26,885 --> 00:07:30,455
+It is blue, or that has
+the property. It is red.
+
+161
+00:07:30,455 --> 00:07:31,835
+That has the property.
+
+162
+00:07:31,835 --> 00:07:35,090
+It's a desk. Why would
+we want to do that?
+
+163
+00:07:35,090 --> 00:07:39,500
+What we do is we
+take the universe.
+
+164
+00:07:39,500 --> 00:07:43,520
+How am I going to define
+in Haskell predicates,
+
+165
+00:07:43,520 --> 00:07:45,230
+all of them are going to be
+
+166
+00:07:45,230 --> 00:07:48,169
+functions from things to Boolean.
+
+167
+00:07:48,169 --> 00:07:50,090
+So these properties icon
+
+168
+00:07:50,090 --> 00:07:53,855
+assertive things and they're
+either true or false.
+
+169
+00:07:53,855 --> 00:07:56,659
+And when I gave a theme
+to this function,
+
+170
+00:07:56,659 --> 00:07:59,435
+I'll get an answer,
+true or false.
+
+171
+00:07:59,435 --> 00:08:04,385
+So if I say k is red
+and apply it to you,
+
+172
+00:08:04,385 --> 00:08:06,589
+you would expect to get true.
+
+173
+00:08:06,589 --> 00:08:10,265
+If I say is blue and
+apply it to you,
+
+174
+00:08:10,265 --> 00:08:12,810
+you would expect to get thoughts.
+
+175
+00:08:13,570 --> 00:08:17,405
+Instead of three features,
+
+176
+00:08:17,405 --> 00:08:19,429
+color, shape, and size.
+
+177
+00:08:19,429 --> 00:08:23,240
+I've now got more than doubled
+the number of properties.
+
+178
+00:08:23,240 --> 00:08:26,330
+But the nice thing is that only
+
+179
+00:08:26,330 --> 00:08:29,630
+has properties have
+the same type.
+
+180
+00:08:29,630 --> 00:08:32,285
+So we work with those things.
+
+181
+00:08:32,285 --> 00:08:34,715
+We're not doing something
+that we'd have to invent
+
+182
+00:08:34,715 --> 00:08:36,050
+over again when we wanted to
+
+183
+00:08:36,050 --> 00:08:37,895
+talk about different features.
+
+184
+00:08:37,895 --> 00:08:40,430
+We could target, is it
+fairly or not fairy?
+
+185
+00:08:40,430 --> 00:08:42,170
+And we'd have to introduce
+a whole new type
+
+186
+00:08:42,170 --> 00:08:43,355
+for talking about that.
+
+187
+00:08:43,355 --> 00:08:47,450
+It's much simpler from the
+point of view of uniformity.
+
+188
+00:08:47,450 --> 00:08:49,474
+If we just talk about
+these predicates.
+
+189
+00:08:49,474 --> 00:08:56,105
+And we can define predicates.
+
+190
+00:08:56,105 --> 00:08:59,480
+Here. We want is this, It's true.
+
+191
+00:08:59,480 --> 00:09:01,115
+It's true of you.
+
+192
+00:09:01,115 --> 00:09:03,650
+It's true of why it's true of Z.
+
+193
+00:09:03,650 --> 00:09:05,060
+And then the next line,
+
+194
+00:09:05,060 --> 00:09:08,570
+this line here, we
+put an underscore.
+
+195
+00:09:08,570 --> 00:09:14,045
+The underscore is a pattern
+that matches anything.
+
+196
+00:09:14,045 --> 00:09:17,225
+If we have a
+constructor like are,
+
+197
+00:09:17,225 --> 00:09:19,070
+we can use it in a pattern when
+
+198
+00:09:19,070 --> 00:09:21,200
+we're defining a function.
+
+199
+00:09:21,200 --> 00:09:22,685
+So we can use it as a name.
+
+200
+00:09:22,685 --> 00:09:24,680
+And we can say this function on
+
+201
+00:09:24,680 --> 00:09:27,215
+this value gives this answer.
+
+202
+00:09:27,215 --> 00:09:30,155
+Is disk r equals true.
+
+203
+00:09:30,155 --> 00:09:32,480
+Says when I apply the function is
+
+204
+00:09:32,480 --> 00:09:37,205
+this thing I've got, is this one.
+
+205
+00:09:37,205 --> 00:09:38,660
+The answer is true. If it's
+
+206
+00:09:38,660 --> 00:09:40,370
+this one, then the
+answer is true.
+
+207
+00:09:40,370 --> 00:09:41,870
+If it's this one,
+than the answer is
+
+208
+00:09:41,870 --> 00:09:44,090
+true if it's this one,
+10-year ancestry.
+
+209
+00:09:44,090 --> 00:09:46,445
+And when that
+function is executed,
+
+210
+00:09:46,445 --> 00:09:47,990
+that's certainly the effect.
+
+211
+00:09:47,990 --> 00:09:50,420
+The effect is the same as if we
+
+212
+00:09:50,420 --> 00:09:51,890
+test this and see if it's
+
+213
+00:09:51,890 --> 00:09:54,050
+our test this and
+see if it's you.
+
+214
+00:09:54,050 --> 00:09:55,430
+And when we do get one,
+
+215
+00:09:55,430 --> 00:09:57,020
+let it is we give the answer.
+
+216
+00:09:57,020 --> 00:09:58,805
+When we get down here.
+
+217
+00:09:58,805 --> 00:10:01,040
+It says, no matter what else you
+
+218
+00:10:01,040 --> 00:10:03,770
+have that matches this pattern.
+
+219
+00:10:03,770 --> 00:10:05,615
+And the answer is false.
+
+220
+00:10:05,615 --> 00:10:07,385
+So it's called a wildcard.
+
+221
+00:10:07,385 --> 00:10:10,220
+It's an underscore and it's
+actually a lot of typing.
+
+222
+00:10:10,220 --> 00:10:13,160
+If you use the underscore
+at the beginning.
+
+223
+00:10:13,160 --> 00:10:15,680
+We'll use the underscore
+as soon as you can,
+
+224
+00:10:15,680 --> 00:10:18,890
+test these things in order
+going through the clauses.
+
+225
+00:10:18,890 --> 00:10:20,315
+So you put them in
+the right order.
+
+226
+00:10:20,315 --> 00:10:23,465
+You very seldom want an
+underscore higher up.
+
+227
+00:10:23,465 --> 00:10:24,950
+The logic is, it
+
+228
+00:10:24,950 --> 00:10:26,615
+tells me this answer,
+it tells me the sounds.
+
+229
+00:10:26,615 --> 00:10:29,705
+And if it gets beyond
+all of those outside,
+
+230
+00:10:29,705 --> 00:10:32,555
+its false, what are we going
+to do about is triangle?
+
+231
+00:10:32,555 --> 00:10:35,540
+In order to define is triangle,
+
+232
+00:10:35,540 --> 00:10:39,860
+we can just define it by
+saying whatever we have.
+
+233
+00:10:39,860 --> 00:10:41,870
+It's a triangle.
+
+234
+00:10:41,870 --> 00:10:43,400
+If it's not a disk.
+
+235
+00:10:43,400 --> 00:10:46,880
+Now recall the types of these
+was given on early a page.
+
+236
+00:10:46,880 --> 00:10:48,860
+Normally your prototypes
+right next to them.
+
+237
+00:10:48,860 --> 00:10:50,585
+So you sort of have
+that in your head.
+
+238
+00:10:50,585 --> 00:10:53,795
+Haskell doesn't require
+you to declare the types,
+
+239
+00:10:53,795 --> 00:10:56,180
+but it's very good
+to declare the types
+
+240
+00:10:56,180 --> 00:10:58,160
+because that tells Haskell
+
+241
+00:10:58,160 --> 00:11:00,425
+what you think
+you're trying to do.
+
+242
+00:11:00,425 --> 00:11:03,470
+Haskell will check when
+you write your definition.
+
+243
+00:11:03,470 --> 00:11:04,820
+And if it doesn't match
+
+244
+00:11:04,820 --> 00:11:07,535
+the type you want
+it, it'll tell you.
+
+245
+00:11:07,535 --> 00:11:10,085
+If it doesn't match
+the type you wanted.
+
+246
+00:11:10,085 --> 00:11:11,960
+There are two things that
+could have happened.
+
+247
+00:11:11,960 --> 00:11:13,940
+You might have done
+what you wanted to do,
+
+248
+00:11:13,940 --> 00:11:15,440
+but you hadn't thought
+about it, Right?
+
+249
+00:11:15,440 --> 00:11:17,150
+You hadn't really
+thought the type out.
+
+250
+00:11:17,150 --> 00:11:21,290
+So that helps you think about
+what's really going on.
+
+251
+00:11:21,290 --> 00:11:23,120
+Or you may have
+
+252
+00:11:23,120 --> 00:11:25,010
+implemented it wrong
+and it's much easier to
+
+253
+00:11:25,010 --> 00:11:26,870
+find out now the much later when
+
+254
+00:11:26,870 --> 00:11:28,985
+you run something and find
+it has the wrong type.
+
+255
+00:11:28,985 --> 00:11:30,800
+So Haskell is strongly typed
+
+256
+00:11:30,800 --> 00:11:33,350
+and it will always
+work counter type.
+
+257
+00:11:33,350 --> 00:11:35,150
+But it'll check if
+you say this is
+
+258
+00:11:35,150 --> 00:11:36,620
+the type I intend to do it,
+
+259
+00:11:36,620 --> 00:11:38,675
+we'll do the check for you
+and that's really useful.
+
+260
+00:11:38,675 --> 00:11:40,535
+Here. We have not,
+
+261
+00:11:40,535 --> 00:11:46,564
+not in Haskell is a function
+from Booleans to Booleans.
+
+262
+00:11:46,564 --> 00:11:47,870
+Notice of type bool,
+
+263
+00:11:47,870 --> 00:11:52,159
+arrow bool, and Booleans
+will be very important.
+
+264
+00:11:52,159 --> 00:11:54,500
+In this part of this course.
+
+265
+00:11:54,500 --> 00:11:56,540
+There introduce
+Sprint the libraries
+
+266
+00:11:56,540 --> 00:11:57,830
+or you don't need to do it.
+
+267
+00:11:57,830 --> 00:12:00,890
+They're introduced
+by a declaration.
+
+268
+00:12:00,890 --> 00:12:07,265
+An enumerated type bowl
+is either false or true.
+
+269
+00:12:07,265 --> 00:12:10,115
+Data Ux equals false or true.
+
+270
+00:12:10,115 --> 00:12:12,920
+And then we have a
+number of functions.
+
+271
+00:12:12,920 --> 00:12:14,480
+There are many
+more, but these are
+
+272
+00:12:14,480 --> 00:12:16,190
+the ones we'll focus
+on for the moment.
+
+273
+00:12:16,190 --> 00:12:19,295
+When we have identifier's
+like ampersand,
+
+274
+00:12:19,295 --> 00:12:21,605
+ampersand that and end symbol.
+
+275
+00:12:21,605 --> 00:12:23,960
+We can use them as
+
+276
+00:12:23,960 --> 00:12:28,205
+infix is in the same
+way as we say a plus B.
+
+277
+00:12:28,205 --> 00:12:31,055
+In logic we can say,
+and in Haskell,
+
+278
+00:12:31,055 --> 00:12:34,340
+we can say a and B
+to get the result.
+
+279
+00:12:34,340 --> 00:12:36,845
+If we put brackets around them,
+
+280
+00:12:36,845 --> 00:12:40,595
+they turn back into
+normal functions.
+
+281
+00:12:40,595 --> 00:12:42,845
+This is, and this is,
+
+282
+00:12:42,845 --> 00:12:46,310
+OR, this is not.
+
+283
+00:12:46,310 --> 00:12:48,935
+And when we're talking
+mathematically,
+
+284
+00:12:48,935 --> 00:12:50,975
+we will use these symbols.
+
+285
+00:12:50,975 --> 00:12:56,885
+True, false, not, and,
+
+286
+00:12:56,885 --> 00:13:01,850
+and or, which are infix
+is like plus and times.
+
+287
+00:13:01,850 --> 00:13:04,445
+These symbols for true and false.
+
+288
+00:13:04,445 --> 00:13:08,915
+In mathematics, we
+have true there.
+
+289
+00:13:08,915 --> 00:13:11,300
+But it's the top element.
+
+290
+00:13:11,300 --> 00:13:14,900
+And we have false here and
+it's a bottom element.
+
+291
+00:13:14,900 --> 00:13:18,170
+So think of this symbolism as
+
+292
+00:13:18,170 --> 00:13:22,445
+also telling you true is up
+there and false is down here.
+
+293
+00:13:22,445 --> 00:13:24,890
+Later, see how to
+use that in doing
+
+294
+00:13:24,890 --> 00:13:27,649
+some computations where
+we draw pictures.
+
+295
+00:13:27,649 --> 00:13:28,970
+And by looking at the pictures,
+
+296
+00:13:28,970 --> 00:13:31,415
+we can work out
+things about pelagic.
+
+297
+00:13:31,415 --> 00:13:35,360
+Now we can go on to is read
+
+298
+00:13:35,360 --> 00:13:37,250
+thoroughly to read
+things that we've done
+
+299
+00:13:37,250 --> 00:13:39,425
+that is blue, done that,
+
+300
+00:13:39,425 --> 00:13:43,160
+then we can be a little
+bit more creative about
+
+301
+00:13:43,160 --> 00:13:47,555
+is green if it's not
+either red or blue.
+
+302
+00:13:47,555 --> 00:13:49,340
+So we can code these kinds of
+
+303
+00:13:49,340 --> 00:13:51,920
+things very easily in Haskell,
+
+304
+00:13:51,920 --> 00:13:54,560
+precise, I've chosen to do
+
+305
+00:13:54,560 --> 00:13:58,115
+the small ones first because
+there's a few fewer of them.
+
+306
+00:13:58,115 --> 00:14:00,470
+So I've said is small
+and then it is big,
+
+307
+00:14:00,470 --> 00:14:02,585
+is not, is small.
+
+308
+00:14:02,585 --> 00:14:08,590
+Now we're going to go and
+look at some comprehensions.
+
+309
+00:14:08,590 --> 00:14:12,140
+You should by now have
+done some comprehension.
+
+310
+00:14:12,140 --> 00:14:13,825
+This is a comprehension,
+
+311
+00:14:13,825 --> 00:14:15,610
+does a generator there.
+
+312
+00:14:15,610 --> 00:14:18,865
+When I defined the
+type for thing,
+
+313
+00:14:18,865 --> 00:14:21,835
+I also defined a list
+
+314
+00:14:21,835 --> 00:14:24,565
+of all the things and
+called it things.
+
+315
+00:14:24,565 --> 00:14:29,215
+So we have a list that
+contains every thing, right?
+
+316
+00:14:29,215 --> 00:14:31,585
+And that is called things.
+
+317
+00:14:31,585 --> 00:14:35,815
+So if I take x from that
+list of all things,
+
+318
+00:14:35,815 --> 00:14:38,080
+and then I have two gods,
+
+319
+00:14:38,080 --> 00:14:40,899
+is red, is triangle.
+
+320
+00:14:40,899 --> 00:14:45,505
+This is a way of producing a
+list of the red triangles.
+
+321
+00:14:45,505 --> 00:14:49,160
+And if I run it, this prompt here
+
+322
+00:14:49,160 --> 00:14:53,045
+is intended to mean when I put
+this into the interpreter,
+
+323
+00:14:53,045 --> 00:14:55,220
+here's the result
+below that I get out.
+
+324
+00:14:55,220 --> 00:14:58,340
+Okay, so when I start with
+that greater than sign,
+
+325
+00:14:58,340 --> 00:15:01,655
+it means this is something
+I've put in the interpreter.
+
+326
+00:15:01,655 --> 00:15:03,590
+And the next line
+will be its output.
+
+327
+00:15:03,590 --> 00:15:06,800
+I put in this comprehension and I
+
+328
+00:15:06,800 --> 00:15:10,745
+get out v as a singleton list.
+
+329
+00:15:10,745 --> 00:15:13,324
+This is the list
+of red triangles.
+
+330
+00:15:13,324 --> 00:15:16,475
+If I take small triangle,
+
+331
+00:15:16,475 --> 00:15:20,060
+we should get S x v as v x.
+
+332
+00:15:20,060 --> 00:15:22,925
+Same thing. It doesn't
+matter which order.
+
+333
+00:15:22,925 --> 00:15:26,630
+When we're doing the computation
+
+334
+00:15:26,630 --> 00:15:29,510
+will normally be using lists
+
+335
+00:15:29,510 --> 00:15:31,849
+to represent
+collections of things.
+
+336
+00:15:31,849 --> 00:15:33,020
+But when we're looking at the
+
+337
+00:15:33,020 --> 00:15:34,535
+mathematics that goes with it,
+
+338
+00:15:34,535 --> 00:15:38,510
+will normally be thinking
+about the set of things.
+
+339
+00:15:38,510 --> 00:15:40,310
+If you have one set of things,
+
+340
+00:15:40,310 --> 00:15:42,890
+you can put them in many
+different orders in the list.
+
+341
+00:15:42,890 --> 00:15:44,899
+When we're thinking
+of them as sets,
+
+342
+00:15:44,899 --> 00:15:47,975
+we don't care what
+order they go in.
+
+343
+00:15:47,975 --> 00:15:52,085
+So small triangles, big
+triangle's, small disks.
+
+344
+00:15:52,085 --> 00:15:55,850
+We can do all of those as well
+as having these two gods.
+
+345
+00:15:55,850 --> 00:16:00,955
+We can do the same
+thing by saying,
+
+346
+00:16:00,955 --> 00:16:04,900
+is red and this
+triangle as the god.
+
+347
+00:16:04,900 --> 00:16:07,090
+Okay? So whereas before I had to,
+
+348
+00:16:07,090 --> 00:16:09,730
+God's separated by a comma.
+
+349
+00:16:09,730 --> 00:16:12,970
+Now I have one god
+
+350
+00:16:12,970 --> 00:16:16,240
+which is made by taking the
+end of those two conditions,
+
+351
+00:16:16,240 --> 00:16:17,815
+the conjunction of
+those two conditions.
+
+352
+00:16:17,815 --> 00:16:20,785
+So this gives the same answers
+as what we had before.
+
+353
+00:16:20,785 --> 00:16:22,120
+When we do that comma,
+
+354
+00:16:22,120 --> 00:16:25,645
+it behaves like an n.
+If we put an all that,
+
+355
+00:16:25,645 --> 00:16:27,805
+then we get something
+quite different.
+
+356
+00:16:27,805 --> 00:16:31,270
+If we get the things that
+are either red or triangles,
+
+357
+00:16:31,270 --> 00:16:33,475
+then we get all the triangles and
+
+358
+00:16:33,475 --> 00:16:37,510
+all the red things. Let
+me write it like this.
+
+359
+00:16:37,510 --> 00:16:38,830
+It doesn't duplicate them.
+
+360
+00:16:38,830 --> 00:16:41,460
+It says is it red?
+
+361
+00:16:41,460 --> 00:16:44,345
+Is it a triangle if it's
+either gonna put it in.
+
+362
+00:16:44,345 --> 00:16:47,255
+So that's another
+way of using this.
+
+363
+00:16:47,255 --> 00:16:50,360
+If you want to get things
+that are small or desks.
+
+364
+00:16:50,360 --> 00:16:52,700
+For instance, how are we going to
+
+365
+00:16:52,700 --> 00:16:56,840
+say every red triangle is
+
+366
+00:16:56,840 --> 00:17:00,905
+small when this property holds
+
+367
+00:17:00,905 --> 00:17:05,360
+for every thing where you've
+got a finite universe.
+
+368
+00:17:05,360 --> 00:17:07,775
+So to say it holds
+for everything,
+
+369
+00:17:07,775 --> 00:17:11,345
+is to say it holds for
+this one and this one,
+
+370
+00:17:11,345 --> 00:17:13,490
+and this one, we
+just list the things
+
+371
+00:17:13,490 --> 00:17:15,725
+we want and check that it holds,
+
+372
+00:17:15,725 --> 00:17:18,305
+a property holds for everything.
+
+373
+00:17:18,305 --> 00:17:20,300
+If it holds for in this instance,
+
+374
+00:17:20,300 --> 00:17:22,415
+R and S and T,
+
+375
+00:17:22,415 --> 00:17:25,505
+and u and v and w
+and x and y and z.
+
+376
+00:17:25,505 --> 00:17:27,920
+Or if I'd taken
+small red triangles,
+
+377
+00:17:27,920 --> 00:17:30,155
+it would be if it holds for v,
+
+378
+00:17:30,155 --> 00:17:32,615
+because there's only
+one small red triangle.
+
+379
+00:17:32,615 --> 00:17:34,310
+Similarly, if I want to say
+
+380
+00:17:34,310 --> 00:17:36,260
+a property holds for something,
+
+381
+00:17:36,260 --> 00:17:40,070
+it's got to hold either
+R or S or T. So when we
+
+382
+00:17:40,070 --> 00:17:44,075
+do a string of Ns,
+we're saying every.
+
+383
+00:17:44,075 --> 00:17:47,645
+And when we do a string
+of O's were saying sum.
+
+384
+00:17:47,645 --> 00:17:49,850
+So we're still trying to answer
+
+385
+00:17:49,850 --> 00:17:54,725
+his questions and see whether,
+
+386
+00:17:54,725 --> 00:17:58,100
+for instance, a red
+triangle is small.
+
+387
+00:17:58,100 --> 00:18:01,190
+Here we're picking
+out the red triangles
+
+388
+00:18:01,190 --> 00:18:06,290
+here instead of just
+giving X, I give x.
+
+389
+00:18:06,290 --> 00:18:08,630
+And whether x is small.
+
+390
+00:18:08,630 --> 00:18:11,315
+So what I get here
+is v and it's true.
+
+391
+00:18:11,315 --> 00:18:12,890
+So we could look at that and say,
+
+392
+00:18:12,890 --> 00:18:15,305
+oh yes, every red
+triangle is small.
+
+393
+00:18:15,305 --> 00:18:17,360
+We could look at this and say,
+
+394
+00:18:17,360 --> 00:18:19,850
+what about small triangles?
+
+395
+00:18:19,850 --> 00:18:22,115
+Are they read?
+
+396
+00:18:22,115 --> 00:18:26,315
+It's not true that every
+small triangle is read.
+
+397
+00:18:26,315 --> 00:18:29,780
+Is it true that some
+small triangle is red?
+
+398
+00:18:29,780 --> 00:18:32,525
+Yes, because there's
+a true in here.
+
+399
+00:18:32,525 --> 00:18:34,700
+If all of these are true,
+
+400
+00:18:34,700 --> 00:18:37,025
+then it's true for everyone.
+
+401
+00:18:37,025 --> 00:18:39,665
+If at least one of them is true,
+
+402
+00:18:39,665 --> 00:18:41,225
+then it's true for some.
+
+403
+00:18:41,225 --> 00:18:42,680
+Now we're going to get Haskell to
+
+404
+00:18:42,680 --> 00:18:44,495
+do that computation for us.
+
+405
+00:18:44,495 --> 00:18:45,935
+We don't really need to know
+
+406
+00:18:45,935 --> 00:18:47,540
+which thing we're talking about.
+
+407
+00:18:47,540 --> 00:18:51,335
+All we need is to know for
+each one whether it's small.
+
+408
+00:18:51,335 --> 00:18:53,630
+So I take the red triangles,
+
+409
+00:18:53,630 --> 00:18:55,490
+I see if it's small,
+
+410
+00:18:55,490 --> 00:18:57,170
+and I take the end of that.
+
+411
+00:18:57,170 --> 00:19:01,580
+So the end of the is red
+for the small triangles,
+
+412
+00:19:01,580 --> 00:19:05,585
+is false and is
+giving us every and,
+
+413
+00:19:05,585 --> 00:19:08,570
+or is giving us some.
+
+414
+00:19:08,570 --> 00:19:11,600
+We'll come back to
+the sort of argument.
+
+415
+00:19:11,600 --> 00:19:15,620
+Now is the point that I wanted
+to get to in this lecture.
+
+416
+00:19:15,620 --> 00:19:18,050
+This is what I want you to
+take away from this lecture,
+
+417
+00:19:18,050 --> 00:19:19,445
+not, not the venn diagram.
+
+418
+00:19:19,445 --> 00:19:21,800
+What I want you to take away is
+
+419
+00:19:21,800 --> 00:19:25,970
+that instead of
+looking at features,
+
+420
+00:19:25,970 --> 00:19:28,280
+we will look at predicates.
+
+421
+00:19:28,280 --> 00:19:30,695
+When we look at predicates,
+
+422
+00:19:30,695 --> 00:19:32,480
+we can use Boolean logic to say
+
+423
+00:19:32,480 --> 00:19:34,340
+things like this and this,
+
+424
+00:19:34,340 --> 00:19:36,020
+not this, this, all this.
+
+425
+00:19:36,020 --> 00:19:38,460
+Okay? We can do those.
+
+426
+00:19:38,500 --> 00:19:42,350
+That when we look at
+our universe and we
+
+427
+00:19:42,350 --> 00:19:45,650
+want to say that something's
+true for everything,
+
+428
+00:19:45,650 --> 00:19:47,900
+then we just take the value for
+
+429
+00:19:47,900 --> 00:19:50,420
+each thing and add them together.
+
+430
+00:19:50,420 --> 00:19:52,145
+And if we get a true,
+
+431
+00:19:52,145 --> 00:19:53,884
+it's true for everything.
+
+432
+00:19:53,884 --> 00:19:56,705
+We get a false. It's not
+true for everything.
+
+433
+00:19:56,705 --> 00:19:59,270
+And where we want to say
+it's true for something,
+
+434
+00:19:59,270 --> 00:20:02,870
+we take all of these things
+and we owe them together.
+
+435
+00:20:02,870 --> 00:20:05,150
+And if at least one
+of them is true,
+
+436
+00:20:05,150 --> 00:20:07,250
+we'll get a true That comes out.
+
+437
+00:20:07,250 --> 00:20:11,060
+And there is some,
+otherwise, there are none.
+
+438
+00:20:11,060 --> 00:20:14,790
+So it's not true that
+sum has this property.

@@ -1,0 +1,672 @@
+1
+00:00:30,240 --> 00:00:35,455
+Let's just think a
+bit about things.
+
+2
+00:00:35,455 --> 00:00:37,840
+We're going to look
+at collections of
+
+3
+00:00:37,840 --> 00:00:40,120
+things to keep it simple.
+
+4
+00:00:40,120 --> 00:00:42,310
+We're going to look at
+finite collections of
+
+5
+00:00:42,310 --> 00:00:45,185
+things and things
+have properties.
+
+6
+00:00:45,185 --> 00:00:48,170
+So here we've got some cosmetics.
+
+7
+00:00:48,170 --> 00:00:49,970
+One of the important properties
+
+8
+00:00:49,970 --> 00:00:51,410
+of cosmetics is that colour.
+
+9
+00:00:51,410 --> 00:00:53,975
+There will be plenty of
+other important properties.
+
+10
+00:00:53,975 --> 00:00:55,910
+We have some tools,
+
+11
+00:00:55,910 --> 00:00:58,790
+these tools that
+dimensions are going to be
+
+12
+00:00:58,790 --> 00:01:01,895
+very important and
+maybe their weight.
+
+13
+00:01:01,895 --> 00:01:04,310
+These crayons, well,
+color's important,
+
+14
+00:01:04,310 --> 00:01:07,234
+but again, there are other
+properties that are important.
+
+15
+00:01:07,234 --> 00:01:11,059
+This crockery, the
+wake, is important.
+
+16
+00:01:11,059 --> 00:01:12,890
+The look of them is important.
+
+17
+00:01:12,890 --> 00:01:15,380
+The other examples
+on this page are
+
+18
+00:01:15,380 --> 00:01:17,870
+examples of games in
+one way or another.
+
+19
+00:01:17,870 --> 00:01:20,255
+Here we have a croquet set,
+
+20
+00:01:20,255 --> 00:01:25,415
+a set of weights for
+exercising models,
+
+21
+00:01:25,415 --> 00:01:29,315
+mythical beasts, and a chess set.
+
+22
+00:01:29,315 --> 00:01:30,845
+I want to talk a little bit
+
+23
+00:01:30,845 --> 00:01:32,480
+about these different
+kinds of gaining,
+
+24
+00:01:32,480 --> 00:01:36,935
+the Cronkite said, as
+balls and mallets.
+
+25
+00:01:36,935 --> 00:01:40,250
+And it's important
+that the balls have
+
+26
+00:01:40,250 --> 00:01:42,694
+their particular
+dimensions and weights
+
+27
+00:01:42,694 --> 00:01:45,590
+that the hoop sat there
+particular dimensions.
+
+28
+00:01:45,590 --> 00:01:48,439
+It's important that
+the mallets or true
+
+29
+00:01:48,439 --> 00:01:53,645
+and have flat faces with
+which to hit the balls.
+
+30
+00:01:53,645 --> 00:01:56,870
+For the weights, the
+weights are important,
+
+31
+00:01:56,870 --> 00:02:00,049
+the dimensions of the
+bars important for these,
+
+32
+00:02:00,049 --> 00:02:02,750
+the physical properties are
+
+33
+00:02:02,750 --> 00:02:05,855
+really essential to these items.
+
+34
+00:02:05,855 --> 00:02:07,819
+If I now coming here,
+
+35
+00:02:07,819 --> 00:02:10,475
+the mythical beasts are
+somewhat different.
+
+36
+00:02:10,475 --> 00:02:14,435
+They representations of
+things that don't exist.
+
+37
+00:02:14,435 --> 00:02:17,285
+So here we have a flying horse.
+
+38
+00:02:17,285 --> 00:02:21,110
+And I can ask you questions
+about the flying horse,
+
+39
+00:02:21,110 --> 00:02:22,685
+how many witnesses attack?
+
+40
+00:02:22,685 --> 00:02:26,374
+And you can look and
+count the wings.
+
+41
+00:02:26,374 --> 00:02:28,760
+But if I ask you,
+
+42
+00:02:28,760 --> 00:02:32,270
+what's its blood temperature?
+
+43
+00:02:32,270 --> 00:02:34,085
+You're gonna get me a Scotland's.
+
+44
+00:02:34,085 --> 00:02:37,790
+Well, it doesn't have blood.
+
+45
+00:02:37,790 --> 00:02:40,130
+The model doesn't have blood.
+
+46
+00:02:40,130 --> 00:02:42,260
+Actually the mythical horse does,
+
+47
+00:02:42,260 --> 00:02:44,855
+because a mythical horse
+can bleed to death,
+
+48
+00:02:44,855 --> 00:02:47,720
+but its temperature
+doesn't make sense.
+
+49
+00:02:47,720 --> 00:02:50,030
+These mythical beasts,
+
+50
+00:02:50,030 --> 00:02:53,180
+you have the properties
+that we ascribe to them.
+
+51
+00:02:53,180 --> 00:02:55,865
+Or at least the myth
+makers ascribe to them.
+
+52
+00:02:55,865 --> 00:02:57,950
+They have those properties
+and it doesn't make
+
+53
+00:02:57,950 --> 00:03:00,739
+sense to ask about
+other properties.
+
+54
+00:03:00,739 --> 00:03:08,630
+Strangely, this bird has
+red and orange wings.
+
+55
+00:03:08,630 --> 00:03:10,610
+So this is a mythical beast with
+
+56
+00:03:10,610 --> 00:03:15,620
+a physical representation
+of the color of its wings.
+
+57
+00:03:15,620 --> 00:03:18,110
+And it's a physical
+representation
+
+58
+00:03:18,110 --> 00:03:21,275
+of the color that only
+exists in a myth.
+
+59
+00:03:21,275 --> 00:03:22,970
+And we can recognize it
+
+60
+00:03:22,970 --> 00:03:25,295
+because we know what
+red looks like.
+
+61
+00:03:25,295 --> 00:03:30,125
+The chess set is in some
+ways the most interesting.
+
+62
+00:03:30,125 --> 00:03:32,295
+The chess pieces.
+
+63
+00:03:32,295 --> 00:03:39,775
+Represent individual
+capabilities.
+
+64
+00:03:39,775 --> 00:03:42,085
+So the way that
+the king can move,
+
+65
+00:03:42,085 --> 00:03:43,870
+the way that the queen can move,
+
+66
+00:03:43,870 --> 00:03:47,095
+the ways they can
+take other pieces,
+
+67
+00:03:47,095 --> 00:03:50,545
+the actions they can take differ.
+
+68
+00:03:50,545 --> 00:03:53,965
+And there's no representation of
+
+69
+00:03:53,965 --> 00:03:58,360
+those properties directly in
+the way they are modeled.
+
+70
+00:03:58,360 --> 00:04:00,730
+And we could model them
+quite differently and
+
+71
+00:04:00,730 --> 00:04:03,535
+still recognize this
+as a chess set.
+
+72
+00:04:03,535 --> 00:04:06,760
+They do have laws that
+
+73
+00:04:06,760 --> 00:04:08,530
+govern the ways they may move
+
+74
+00:04:08,530 --> 00:04:10,840
+on the board and the
+things they can do.
+
+75
+00:04:10,840 --> 00:04:12,700
+Do we need a board to play chess?
+
+76
+00:04:12,700 --> 00:04:14,080
+While some people down, there are
+
+77
+00:04:14,080 --> 00:04:17,915
+people who can play
+testing their heads.
+
+78
+00:04:17,915 --> 00:04:20,810
+And certainly a computer
+
+79
+00:04:20,810 --> 00:04:24,920
+can play chess without
+the Jess said.
+
+80
+00:04:24,920 --> 00:04:28,985
+In some sense, it
+plays virtually.
+
+81
+00:04:28,985 --> 00:04:32,210
+So what is logic?
+
+82
+00:04:32,210 --> 00:04:36,680
+Logic has something in
+common with this example.
+
+83
+00:04:36,680 --> 00:04:39,635
+On something in common
+with this example,
+
+84
+00:04:39,635 --> 00:04:43,070
+less in common with
+the weights on the CR.
+
+85
+00:04:43,070 --> 00:04:46,430
+Okay? In the case of
+the mythical beasts,
+
+86
+00:04:46,430 --> 00:04:51,230
+we have mythical creatures
+which exist only
+
+87
+00:04:51,230 --> 00:04:53,690
+virtually and which
+have the properties
+
+88
+00:04:53,690 --> 00:04:57,390
+that the myth makers
+of given them.
+
+89
+00:04:57,390 --> 00:05:00,685
+And then we'd make
+a physical model.
+
+90
+00:05:00,685 --> 00:05:03,190
+In logic, we often take
+
+91
+00:05:03,190 --> 00:05:06,940
+a physical situation and
+then we abstract from
+
+92
+00:05:06,940 --> 00:05:09,985
+that physical situation and make
+
+93
+00:05:09,985 --> 00:05:12,160
+virtual things or mythical things
+
+94
+00:05:12,160 --> 00:05:13,765
+if you want to put it that way,
+
+95
+00:05:13,765 --> 00:05:17,770
+which had only the properties
+that we've focused on.
+
+96
+00:05:17,770 --> 00:05:20,425
+And we ignore all the
+other properties.
+
+97
+00:05:20,425 --> 00:05:24,445
+And now we reason about
+those properties in
+
+98
+00:05:24,445 --> 00:05:26,710
+just the same way as we would
+
+99
+00:05:26,710 --> 00:05:31,720
+reason about the properties
+of the mythical beasts.
+
+100
+00:05:31,720 --> 00:05:34,180
+Logic also has something in
+
+101
+00:05:34,180 --> 00:05:37,870
+common with the chess example.
+
+102
+00:05:37,870 --> 00:05:41,750
+Because as well as
+modeling properties
+
+103
+00:05:41,750 --> 00:05:46,010
+of some abstract things that
+only have those properties,
+
+104
+00:05:46,010 --> 00:05:51,425
+we can model the capabilities
+of those things,
+
+105
+00:05:51,425 --> 00:05:53,495
+the ways they can interact,
+
+106
+00:05:53,495 --> 00:05:56,960
+the ways they can move
+on a virtual board.
+
+107
+00:05:56,960 --> 00:05:59,150
+But instead of it
+being a virtual board,
+
+108
+00:05:59,150 --> 00:06:03,305
+we can make a model that
+follows some rules,
+
+109
+00:06:03,305 --> 00:06:05,300
+rather like the rules of chess.
+
+110
+00:06:05,300 --> 00:06:08,540
+A reason about the real world
+
+111
+00:06:08,540 --> 00:06:12,755
+by actually reasoning
+about the model.
+
+112
+00:06:12,755 --> 00:06:17,330
+In this video, we've
+introduced the discussion of
+
+113
+00:06:17,330 --> 00:06:22,460
+the relationship between
+logic, models and reality.
+
+114
+00:06:22,460 --> 00:06:26,134
+In the case of the mythical
+beasts and the class pieces,
+
+115
+00:06:26,134 --> 00:06:29,540
+we have some ideas
+of properties of
+
+116
+00:06:29,540 --> 00:06:34,010
+the bees or capabilities
+of the chess pieces.
+
+117
+00:06:34,010 --> 00:06:39,410
+And we use physical marbles
+to represent those.
+
+118
+00:06:39,410 --> 00:06:42,980
+And to help us to visualize
+the mythical beasts and
+
+119
+00:06:42,980 --> 00:06:47,045
+the abstract capabilities
+of the chess pieces.
+
+120
+00:06:47,045 --> 00:06:49,910
+What we're going to
+go with logic is to
+
+121
+00:06:49,910 --> 00:06:52,835
+get a language that
+allows us to take
+
+122
+00:06:52,835 --> 00:06:58,865
+real situations and create
+virtual situations.
+
+123
+00:06:58,865 --> 00:07:01,909
+That model. Some of
+their properties.
+
+124
+00:07:01,909 --> 00:07:03,830
+If we choose the properties we
+
+125
+00:07:03,830 --> 00:07:05,780
+model appropriately, we can,
+
+126
+00:07:05,780 --> 00:07:07,460
+we can make our models both
+
+127
+00:07:07,460 --> 00:07:10,250
+tractable in the
+sense that we can
+
+128
+00:07:10,250 --> 00:07:15,410
+use computers to play games
+represented by those models.
+
+129
+00:07:15,410 --> 00:07:18,125
+And applicable in the sense that
+
+130
+00:07:18,125 --> 00:07:20,675
+the results of those games
+
+131
+00:07:20,675 --> 00:07:23,810
+were mirrored in the real world.
+
+132
+00:07:23,810 --> 00:07:26,090
+You can use chess as
+
+133
+00:07:26,090 --> 00:07:28,955
+a metaphor to try
+and understand this.
+
+134
+00:07:28,955 --> 00:07:30,995
+Logic allows us to convert
+
+135
+00:07:30,995 --> 00:07:35,105
+many real-world problems
+into gains a bit like chess,
+
+136
+00:07:35,105 --> 00:07:36,920
+we use symbols to replace
+
+137
+00:07:36,920 --> 00:07:38,630
+the various entities involved
+
+138
+00:07:38,630 --> 00:07:40,865
+and describe their interactions.
+
+139
+00:07:40,865 --> 00:07:46,760
+And computers play these
+games to solve real problems.
+
+140
+00:07:46,760 --> 00:07:50,045
+We'll also use computers
+to help us do logic.
+
+141
+00:07:50,045 --> 00:07:51,740
+You don't need a computer,
+
+142
+00:07:51,740 --> 00:07:53,600
+but the computer can
+help you to learn
+
+143
+00:07:53,600 --> 00:07:55,805
+logic just as a chessboard.
+
+144
+00:07:55,805 --> 00:07:59,450
+Even a virtual chess board
+can help you to learn chess.
+
+145
+00:07:59,450 --> 00:08:04,110
+So we'll be using Haskell
+to help you learn logic.
+
+146
+00:08:58,560 --> 00:09:09,780
+Really. Yeah.

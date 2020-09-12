@@ -1,0 +1,376 @@
+1
+00:00:00,050 --> 00:00:03,180
+Hello. The statements were
+
+2
+00:00:03,180 --> 00:00:05,219
+introduced in the previous video,
+
+3
+00:00:05,219 --> 00:00:08,115
+are actually classical statements
+
+4
+00:00:08,115 --> 00:00:11,700
+introduced into
+logic by Aristotle.
+
+5
+00:00:11,700 --> 00:00:13,680
+And they form what are known
+
+6
+00:00:13,680 --> 00:00:16,140
+as his categorical propositions.
+
+7
+00:00:16,140 --> 00:00:18,735
+They say every a is b.
+
+8
+00:00:18,735 --> 00:00:22,080
+Now ASB, some ASB.
+
+9
+00:00:22,080 --> 00:00:24,750
+Aristotle was the
+first to try and
+
+10
+00:00:24,750 --> 00:00:28,260
+formalize arguments
+using statements.
+
+11
+00:00:28,260 --> 00:00:31,995
+We saw last time that
+in our universe,
+
+12
+00:00:31,995 --> 00:00:34,260
+every red triangle is small.
+
+13
+00:00:34,260 --> 00:00:38,080
+And it is not the case that
+every small triangle is red.
+
+14
+00:00:38,080 --> 00:00:41,090
+I want to do here
+is to discuss in
+
+15
+00:00:41,090 --> 00:00:44,615
+a little more detail
+how we tell that.
+
+16
+00:00:44,615 --> 00:00:46,685
+We want to analyze.
+
+17
+00:00:46,685 --> 00:00:50,310
+How did we decide
+that that's the case?
+
+18
+00:00:51,640 --> 00:00:58,175
+So we're going to look at
+every red triangle is small.
+
+19
+00:00:58,175 --> 00:01:01,280
+And we're going to look at it
+in terms of a Venn diagram.
+
+20
+00:01:01,280 --> 00:01:02,975
+So we're talking here about
+
+21
+00:01:02,975 --> 00:01:07,700
+the triangles which we've
+put inside this circle.
+
+22
+00:01:07,700 --> 00:01:13,114
+The red things that we
+put inside this circle,
+
+23
+00:01:13,114 --> 00:01:15,290
+and the small things
+that we've put
+
+24
+00:01:15,290 --> 00:01:18,080
+inside this faint circle.
+
+25
+00:01:18,080 --> 00:01:21,950
+If there were red triangle,
+
+26
+00:01:21,950 --> 00:01:26,225
+that was not small
+way would we find it?
+
+27
+00:01:26,225 --> 00:01:29,585
+We want to look at
+the red triangles.
+
+28
+00:01:29,585 --> 00:01:31,760
+So the red triangles fall in
+
+29
+00:01:31,760 --> 00:01:35,405
+this part of the Venn diagram.
+
+30
+00:01:35,405 --> 00:01:38,720
+So we take the red
+triangles and then we
+
+31
+00:01:38,720 --> 00:01:42,125
+look at the things that is small.
+
+32
+00:01:42,125 --> 00:01:44,120
+This place here is where we would
+
+33
+00:01:44,120 --> 00:01:49,700
+put anything that was a
+counterexample to this.
+
+34
+00:01:49,700 --> 00:01:53,000
+Um, because there are
+no counter-examples,
+
+35
+00:01:53,000 --> 00:01:57,620
+it's true that every
+red triangle is small.
+
+36
+00:01:57,620 --> 00:02:02,570
+We can do something similar
+for all of the others.
+
+37
+00:02:02,570 --> 00:02:07,175
+Every small triangle is read it,
+
+38
+00:02:07,175 --> 00:02:10,085
+every small triangle is red.
+
+39
+00:02:10,085 --> 00:02:15,110
+Then we take the small
+triangles so that
+
+40
+00:02:15,110 --> 00:02:20,465
+these small triangles
+and were true,
+
+41
+00:02:20,465 --> 00:02:23,719
+we would have found
+that this was empty.
+
+42
+00:02:23,719 --> 00:02:25,580
+We can see that it's
+
+43
+00:02:25,580 --> 00:02:27,995
+not the case that every
+small triangle is right,
+
+44
+00:02:27,995 --> 00:02:29,930
+because there is
+something in here.
+
+45
+00:02:29,930 --> 00:02:31,700
+And that would have
+to be empty to
+
+46
+00:02:31,700 --> 00:02:34,920
+have every small
+triangle being read.
+
+47
+00:02:37,390 --> 00:02:39,980
+Now we move to the next one.
+
+48
+00:02:39,980 --> 00:02:43,065
+Some big triangle is amber.
+
+49
+00:02:43,065 --> 00:02:46,025
+Look now at the big triangles.
+
+50
+00:02:46,025 --> 00:02:50,945
+They are the things that
+are in the triangles,
+
+51
+00:02:50,945 --> 00:02:54,140
+but not in the small.
+
+52
+00:02:54,140 --> 00:02:57,260
+So these is the big triangles.
+
+53
+00:02:57,260 --> 00:03:00,199
+Some big triangle is amber.
+
+54
+00:03:00,199 --> 00:03:02,375
+Here are the amber things.
+
+55
+00:03:02,375 --> 00:03:07,985
+And because there is something
+in here, this is true.
+
+56
+00:03:07,985 --> 00:03:11,285
+To show that some began
+to triangle is Amber.
+
+57
+00:03:11,285 --> 00:03:15,180
+We showed that a particular
+region is inhabited.
+
+58
+00:03:16,300 --> 00:03:20,720
+The next one is some
+small, this is red.
+
+59
+00:03:20,720 --> 00:03:23,660
+We then take the small disks.
+
+60
+00:03:23,660 --> 00:03:29,065
+Here are the disks and
+here are the small things.
+
+61
+00:03:29,065 --> 00:03:34,105
+These are the small
+disks, small disk.
+
+62
+00:03:34,105 --> 00:03:36,130
+And if one of them were red,
+
+63
+00:03:36,130 --> 00:03:39,385
+this will be inhabited.
+But it's not.
+
+64
+00:03:39,385 --> 00:03:41,650
+So, it's not inhabited.
+
+65
+00:03:41,650 --> 00:03:44,450
+So this is false.
+
+66
+00:03:46,140 --> 00:03:50,200
+No red thing is blue
+will be our next.
+
+67
+00:03:50,200 --> 00:03:56,995
+So let's look at the red
+things and the blue things.
+
+68
+00:03:56,995 --> 00:04:01,525
+And to say that no
+red thing is blew,
+
+69
+00:04:01,525 --> 00:04:05,950
+all we need to do is
+to say this is empty.
+
+70
+00:04:05,950 --> 00:04:09,445
+That tells us that no
+red thing is blue.
+
+71
+00:04:09,445 --> 00:04:11,335
+When we looked at these,
+
+72
+00:04:11,335 --> 00:04:13,060
+we looked at red triangles and
+
+73
+00:04:13,060 --> 00:04:17,109
+small triangles and big
+triangle's small disks.
+
+74
+00:04:17,109 --> 00:04:20,425
+And we had three predicates
+to deal with at once.
+
+75
+00:04:20,425 --> 00:04:23,035
+But actually, if we think of
+
+76
+00:04:23,035 --> 00:04:24,160
+red triangle is
+
+77
+00:04:24,160 --> 00:04:26,545
+a predicate and small
+triangle is a predicate.
+
+78
+00:04:26,545 --> 00:04:28,210
+A big triangle is a predicate
+
+79
+00:04:28,210 --> 00:04:30,265
+and small disk is a predicate.
+
+80
+00:04:30,265 --> 00:04:35,080
+Then the kind of reasoning
+we've done here with
+
+81
+00:04:35,080 --> 00:04:37,210
+just two circles will be
+
+82
+00:04:37,210 --> 00:04:41,750
+enough to check all these
+kinds of statement.
+
+83
+00:04:42,000 --> 00:04:46,070
+And we'll see that next time.

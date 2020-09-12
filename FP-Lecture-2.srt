@@ -1,0 +1,1656 @@
+1
+00:00:00,000 --> 00:00:02,865
+So remember I said the difference
+
+2
+00:00:02,865 --> 00:00:05,580
+between functional programs
+is that they're not Tikki,
+
+3
+00:00:05,580 --> 00:00:08,830
+Tikki, Tikki, that
+they are whoosh.
+
+4
+00:00:10,070 --> 00:00:13,230
+And right, you've seen
+
+5
+00:00:13,230 --> 00:00:16,604
+some Tikki Tikki
+operations on numbers.
+
+6
+00:00:16,604 --> 00:00:18,570
+You've seen some
+wash doing things
+
+7
+00:00:18,570 --> 00:00:21,165
+with whole pictures at a time.
+
+8
+00:00:21,165 --> 00:00:23,760
+But you didn't see
+how to do that yet.
+
+9
+00:00:23,760 --> 00:00:25,200
+I said, Oh, that's,
+that's abstract.
+
+10
+00:00:25,200 --> 00:00:27,780
+Don't worry about
+it. That's a detail
+
+11
+00:00:27,780 --> 00:00:29,325
+you don't need to know yet.
+
+12
+00:00:29,325 --> 00:00:32,820
+So here for the first time,
+
+13
+00:00:32,820 --> 00:00:34,680
+I'm going to show you how to
+
+14
+00:00:34,680 --> 00:00:36,570
+build large data structures from
+
+15
+00:00:36,570 --> 00:00:39,014
+small ones and how to operate
+
+16
+00:00:39,014 --> 00:00:42,575
+woosh on that whole
+structure at once.
+
+17
+00:00:42,575 --> 00:00:45,460
+So the large data structure
+that's built out of
+
+18
+00:00:45,460 --> 00:00:48,895
+small ones is called the list.
+
+19
+00:00:48,895 --> 00:00:51,040
+And the thing that
+operates on it is
+
+20
+00:00:51,040 --> 00:00:54,650
+called a list comprehension.
+
+21
+00:00:56,970 --> 00:00:59,860
+And you can go to
+
+22
+00:00:59,860 --> 00:01:03,190
+the webpage for the
+reading list, okay, lists.
+
+23
+00:01:03,190 --> 00:01:06,055
+So wait, now I think
+I can do a demo.
+
+24
+00:01:06,055 --> 00:01:08,300
+Let's try this.
+
+25
+00:01:08,370 --> 00:01:11,380
+Just checking to see
+what I want to demo.
+
+26
+00:01:11,380 --> 00:01:18,085
+Okay. Wait, now I
+have to do that.
+
+27
+00:01:18,085 --> 00:01:22,160
+To do that.
+
+28
+00:01:22,680 --> 00:01:31,020
+I have to do at this.
+
+29
+00:01:33,070 --> 00:01:39,360
+Doo Doo Doo Doo Doo Doo
+Doo Doo Doo Doo Doo Doo
+
+30
+00:01:40,240 --> 00:01:42,560
+Doo
+
+31
+00:01:50,280 --> 00:01:52,540
+Doo
+
+32
+00:01:56,310 --> 00:02:02,210
+Doo Doo
+
+33
+00:02:02,210 --> 00:02:07,445
+Doo Doo Doo Doo Doo Doo
+Doo Doo Doo Doo Doo Doo.
+
+34
+00:02:07,445 --> 00:02:13,430
+Do, do, do, do, do, do what?
+
+35
+00:02:13,430 --> 00:02:16,910
+Catherine amendment. You
+like my singing, right?
+
+36
+00:02:16,910 --> 00:02:24,620
+Doo Doo Doo Doo Doo Doo
+Doo Doo Doo, Doo, Doo Doo.
+
+37
+00:02:24,620 --> 00:02:27,680
+You don't need any of those.
+
+38
+00:02:27,680 --> 00:02:34,565
+Yeah. Okay, here's a file.
+
+39
+00:02:34,565 --> 00:02:41,525
+So my list is going to
+be a list of integers.
+
+40
+00:02:41,525 --> 00:02:43,400
+And my list is gonna
+
+41
+00:02:43,400 --> 00:02:46,070
+consist of the favorite integers
+
+42
+00:02:46,070 --> 00:02:47,165
+of the people in this route.
+
+43
+00:02:47,165 --> 00:02:52,980
+Your favorite integer is
+Forty-two, same as mine.
+
+44
+00:02:54,430 --> 00:02:59,489
+Your favorite integer
+is next person.
+
+45
+00:02:59,920 --> 00:03:04,680
+12. Next prison.
+
+46
+00:03:05,050 --> 00:03:14,660
+35. Next person, seven.
+Let's be consistent.
+
+47
+00:03:14,660 --> 00:03:19,205
+Seven, next person thought,
+
+48
+00:03:19,205 --> 00:03:21,545
+and somebody likes 100, okay?
+
+49
+00:03:21,545 --> 00:03:27,200
+So there's a list, right?
+
+50
+00:03:27,200 --> 00:03:30,560
+Good. And here we're
+executing things.
+
+51
+00:03:30,560 --> 00:03:34,250
+So if I type, I go into it.
+
+52
+00:03:34,250 --> 00:03:36,590
+You might use Haskell
+in different ways.
+
+53
+00:03:36,590 --> 00:03:38,180
+You can use your favorite editor.
+
+54
+00:03:38,180 --> 00:03:40,040
+My favorite editor
+is called Emacs.
+
+55
+00:03:40,040 --> 00:03:41,780
+I'm typing the program here.
+
+56
+00:03:41,780 --> 00:03:44,000
+And then when I type
+control C, control l,
+
+57
+00:03:44,000 --> 00:03:46,700
+It gives me an
+execution window here.
+
+58
+00:03:46,700 --> 00:03:56,540
+And in fact, let's just kill
+them for a minute. Go back.
+
+59
+00:03:56,540 --> 00:04:00,650
+See. Right. So it
+begins by saying, hi,
+
+60
+00:04:00,650 --> 00:04:05,720
+you're running G
+HCI. What does DHC?
+
+61
+00:04:05,720 --> 00:04:11,430
+I stand for Glasgow Haskell
+Compiler interactive.
+
+62
+00:04:11,640 --> 00:04:14,860
+So in fact, the main compiler for
+
+63
+00:04:14,860 --> 00:04:17,635
+Haskell is called the
+Glasgow Haskell Compiler.
+
+64
+00:04:17,635 --> 00:04:21,355
+It's now maintained by
+Simon Peyton Jones,
+
+65
+00:04:21,355 --> 00:04:24,070
+who's a research
+senior researcher
+
+66
+00:04:24,070 --> 00:04:26,860
+at Microsoft Research
+in Cambridge.
+
+67
+00:04:26,860 --> 00:04:29,200
+But he and I used
+to be colleagues at
+
+68
+00:04:29,200 --> 00:04:31,870
+Glasgow University on the
+other side of the country.
+
+69
+00:04:31,870 --> 00:04:33,760
+And that's where
+this was first done.
+
+70
+00:04:33,760 --> 00:04:36,130
+So that's why it's called the
+Glasgow Haskell Compiler,
+
+71
+00:04:36,130 --> 00:04:39,590
+Scottish heritage for
+functional programming.
+
+72
+00:04:39,750 --> 00:04:42,010
+And what's said, okay, I'm ready,
+
+73
+00:04:42,010 --> 00:04:43,960
+JC, I've loaded the prelude.
+
+74
+00:04:43,960 --> 00:04:45,490
+That's a bunch of
+definitions that you
+
+75
+00:04:45,490 --> 00:04:47,035
+normally get by default.
+
+76
+00:04:47,035 --> 00:04:48,460
+It's called the Prelude.
+
+77
+00:04:48,460 --> 00:04:50,980
+And that says, okay,
+one module loaded,
+
+78
+00:04:50,980 --> 00:04:54,825
+meaning I actually read
+the Prelude and it worked.
+
+79
+00:04:54,825 --> 00:04:57,215
+And oh sorry, noted,
+
+80
+00:04:57,215 --> 00:04:58,445
+the module load is made,
+
+81
+00:04:58,445 --> 00:05:00,620
+so it's given a name
+to this file here.
+
+82
+00:05:00,620 --> 00:05:02,005
+I didn't write down the name.
+
+83
+00:05:02,005 --> 00:05:04,760
+So choosing the name
+main, it says, okay,
+
+84
+00:05:04,760 --> 00:05:06,260
+one module loaded, meaning this,
+
+85
+00:05:06,260 --> 00:05:07,925
+sorry, not meaning the prelude.
+
+86
+00:05:07,925 --> 00:05:10,430
+It always loads the Prelude.
+
+87
+00:05:10,430 --> 00:05:14,660
+And now I've got these
+definitions in so I can say,
+
+88
+00:05:14,660 --> 00:05:18,350
+what is the type, so
+containings, What is the typeof?
+
+89
+00:05:18,350 --> 00:05:20,090
+You can also say, you can
+
+90
+00:05:20,090 --> 00:05:23,100
+also spell it this
+way, doesn't matter.
+
+91
+00:05:24,970 --> 00:05:27,590
+And says, yep, that's
+a list of integers,
+
+92
+00:05:27,590 --> 00:05:30,860
+which is exactly
+what I said here.
+
+93
+00:05:30,860 --> 00:05:34,520
+And now I get asked things
+about like what is my list?
+
+94
+00:05:34,520 --> 00:05:36,125
+Okay, it's what we thought.
+
+95
+00:05:36,125 --> 00:05:38,795
+I can say. What is the
+length of my list?
+
+96
+00:05:38,795 --> 00:05:43,100
+What's it going to
+say? Six, right,
+
+97
+00:05:43,100 --> 00:05:45,185
+because they six numbers
+written down there.
+
+98
+00:05:45,185 --> 00:05:48,620
+Or I can say what is
+the sum of my list?
+
+99
+00:05:48,620 --> 00:05:50,720
+And it will say 201. Or I
+
+100
+00:05:50,720 --> 00:05:53,580
+can even say what is the product?
+
+101
+00:05:53,830 --> 00:05:57,590
+Product of my list?
+
+102
+00:05:57,590 --> 00:06:00,210
+And it gives us a big number.
+
+103
+00:06:04,060 --> 00:06:11,930
+Let's see. So count up to en.
+
+104
+00:06:11,930 --> 00:06:15,410
+He's going to take a
+list of integers, sorry,
+
+105
+00:06:15,410 --> 00:06:17,930
+it's going to take an
+integer and give us a list
+
+106
+00:06:17,930 --> 00:06:20,915
+of integers from one
+up to that number.
+
+107
+00:06:20,915 --> 00:06:28,380
+Well-defined count
+up of n as the list.
+
+108
+00:06:29,530 --> 00:06:34,220
+That's the numbers from
+one to n, c, thats right.
+
+109
+00:06:34,220 --> 00:06:37,140
+Though I did something wrong.
+
+110
+00:06:41,530 --> 00:06:45,260
+Yeah, I need to put brackets
+around this downtime.
+
+111
+00:06:45,260 --> 00:06:50,430
+Wow, I've forgotten how Haskell
+works. That's impressive.
+
+112
+00:06:50,800 --> 00:06:54,150
+No luck.
+
+113
+00:06:57,970 --> 00:07:02,460
+I'm now going to program
+the way you all program.
+
+114
+00:07:05,500 --> 00:07:08,790
+Bring up the browser.
+
+115
+00:07:10,120 --> 00:07:15,180
+Factorial in Haskell.
+
+116
+00:07:24,010 --> 00:07:28,715
+Yep. Yep, it Is that okay.
+
+117
+00:07:28,715 --> 00:07:31,290
+What am I getting wrong?
+
+118
+00:07:36,130 --> 00:07:39,095
+Oh, that's what I did
+wrong. Thank you.
+
+119
+00:07:39,095 --> 00:07:40,850
+Write its count, takes
+
+120
+00:07:40,850 --> 00:07:42,815
+an integer and returns
+a list of integer.
+
+121
+00:07:42,815 --> 00:07:47,120
+Of course. There we go.
+
+122
+00:07:47,120 --> 00:07:56,580
+Yay. So now I can say
+cout for count up.
+
+123
+00:07:58,870 --> 00:08:07,055
+Write. Short. Names are better.
+
+124
+00:08:07,055 --> 00:08:09,680
+Not everybody agrees
+with that advice,
+
+125
+00:08:09,680 --> 00:08:18,150
+but we don't want
+that. There we go.
+
+126
+00:08:18,780 --> 00:08:23,320
+Cout for 1234.
+
+127
+00:08:23,320 --> 00:08:31,525
+Count ten, 1-2-3-4-5, 1042.
+
+128
+00:08:31,525 --> 00:08:36,890
+Length count 42.
+
+129
+00:08:37,080 --> 00:08:40,660
+Factorial product.
+
+130
+00:08:40,660 --> 00:08:44,230
+Count 42.
+
+131
+00:08:44,230 --> 00:08:47,980
+Big number. Await this wrong.
+
+132
+00:08:47,980 --> 00:08:49,030
+Actually, I want to
+
+133
+00:08:49,030 --> 00:08:53,275
+do that's possibly the Nau
+didn't get an overflow.
+
+134
+00:08:53,275 --> 00:08:57,355
+Ok. You can also say integer.
+
+135
+00:08:57,355 --> 00:09:00,115
+Then you get really big numbers.
+
+136
+00:09:00,115 --> 00:09:02,480
+So it's reloaded it.
+
+137
+00:09:05,490 --> 00:09:08,160
+Right? Yeah, I see that.
+
+138
+00:09:08,160 --> 00:09:10,730
+That oh, wow.
+
+139
+00:09:10,860 --> 00:09:14,080
+Right. This is bad.
+
+140
+00:09:14,080 --> 00:09:15,505
+I don't know why that happen.
+
+141
+00:09:15,505 --> 00:09:18,730
+It gave the wrong answer.
+
+142
+00:09:18,730 --> 00:09:20,605
+I didn't say anything.
+
+143
+00:09:20,605 --> 00:09:23,035
+It should have said,
+
+144
+00:09:23,035 --> 00:09:27,550
+this is a bigger number
+than will fit in an int.
+
+145
+00:09:27,550 --> 00:09:30,325
+And given what's called
+an overflow error.
+
+146
+00:09:30,325 --> 00:09:31,705
+But it did not,
+
+147
+00:09:31,705 --> 00:09:33,070
+I don't know why it didn't give
+
+148
+00:09:33,070 --> 00:09:35,545
+an overflow error it
+should have done.
+
+149
+00:09:35,545 --> 00:09:38,020
+I do some work with
+crypto currencies.
+
+150
+00:09:38,020 --> 00:09:43,345
+It turns out that
+literally tens of millions
+
+151
+00:09:43,345 --> 00:09:45,380
+of US dollars been
+
+152
+00:09:45,380 --> 00:09:49,309
+lost through overflow areas
+that were not detected.
+
+153
+00:09:49,309 --> 00:09:52,010
+So never designed something
+that doesn't detect
+
+154
+00:09:52,010 --> 00:09:53,450
+overflow errors and that should
+
+155
+00:09:53,450 --> 00:09:55,805
+detect an overflow
+error. That's very bad.
+
+156
+00:09:55,805 --> 00:09:58,340
+But using integers we can
+see we can get represent
+
+157
+00:09:58,340 --> 00:10:00,905
+very long numbers
+inside the computer.
+
+158
+00:10:00,905 --> 00:10:02,870
+So even the numbers
+are not really Tikki,
+
+159
+00:10:02,870 --> 00:10:04,865
+Tikki, they're
+actually represented.
+
+160
+00:10:04,865 --> 00:10:07,610
+They can be represented as a
+single word in the computer,
+
+161
+00:10:07,610 --> 00:10:08,960
+but they are sometimes
+represented as
+
+162
+00:10:08,960 --> 00:10:13,430
+multiple words represent
+very long numbers like this.
+
+163
+00:10:13,430 --> 00:10:20,510
+Okay, so now we're
+
+164
+00:10:20,510 --> 00:10:23,225
+going to go back to the
+lecture for a minute.
+
+165
+00:10:23,225 --> 00:10:26,640
+Remind myself what I
+was going to cover.
+
+166
+00:10:32,520 --> 00:10:39,680
+So we can make lists of
+things that are characters.
+
+167
+00:10:39,960 --> 00:10:45,370
+And in fact, here I've made
+a list of characters I NF-1,
+
+168
+00:10:45,370 --> 00:10:47,560
+but that's just the
+same as this strings.
+
+169
+00:10:47,560 --> 00:10:49,150
+You can write a single
+character between
+
+170
+00:10:49,150 --> 00:10:51,130
+single quotes or a list
+
+171
+00:10:51,130 --> 00:10:54,820
+of characters called a string
+between double quotes.
+
+172
+00:10:54,820 --> 00:10:57,460
+We can also have lists of lists,
+
+173
+00:10:57,460 --> 00:11:01,975
+of lists of functions
+that act on pictures.
+
+174
+00:11:01,975 --> 00:11:05,590
+You can't have lists of
+things of different types.
+
+175
+00:11:05,590 --> 00:11:07,885
+Alright, and we've seen count.
+
+176
+00:11:07,885 --> 00:11:12,025
+So now we can do
+list comprehensions.
+
+177
+00:11:12,025 --> 00:11:16,830
+So let's do some examples.
+
+178
+00:11:23,470 --> 00:11:28,170
+So let's define square.
+
+179
+00:11:29,890 --> 00:11:35,940
+So that takes an
+integer to an integer.
+
+180
+00:11:36,310 --> 00:11:41,250
+And it will define the square
+of x is just x times x.
+
+181
+00:11:41,380 --> 00:11:46,520
+So now I can do
+something like I want to
+
+182
+00:11:46,520 --> 00:11:56,130
+square every x for
+x from one to ten.
+
+183
+00:11:58,950 --> 00:12:04,880
+Oh, I forgot to load
+it. Try that again.
+
+184
+00:12:29,730 --> 00:12:34,015
+And there were the squares
+of the first ten numbers.
+
+185
+00:12:34,015 --> 00:12:38,865
+And I want to find the
+sum of the squares,
+
+186
+00:12:38,865 --> 00:12:41,730
+the first ten numbers.
+
+187
+00:12:43,870 --> 00:12:47,690
+That's 385, right?
+
+188
+00:12:47,690 --> 00:12:51,270
+And we could sum the squares
+of the numbers up to n.
+
+189
+00:13:16,900 --> 00:13:26,935
+Not happy. I want the formal
+parameter to be n not x.
+
+190
+00:13:26,935 --> 00:13:29,980
+So x appears here.
+
+191
+00:13:29,980 --> 00:13:32,380
+So x is called a variable,
+
+192
+00:13:32,380 --> 00:13:33,715
+n is called a variable.
+
+193
+00:13:33,715 --> 00:13:35,785
+This n is a formal parameter.
+
+194
+00:13:35,785 --> 00:13:39,250
+This X is an actual
+parameter to square.
+
+195
+00:13:39,250 --> 00:13:42,490
+Whereas here x is the
+formal parameter.
+
+196
+00:13:42,490 --> 00:13:44,500
+Of course, I can use
+any names I want
+
+197
+00:13:44,500 --> 00:13:46,660
+as long as I use
+them consistently.
+
+198
+00:13:46,660 --> 00:13:50,510
+That doesn't have to
+be X, it could be y.
+
+199
+00:13:52,740 --> 00:13:55,000
+So now let's check that we get
+
+200
+00:13:55,000 --> 00:13:58,360
+the same answer
+before we got 385.
+
+201
+00:13:58,360 --> 00:14:00,370
+Sum the squares of
+the numbers up to
+
+202
+00:14:00,370 --> 00:14:03,520
+ten, and you get 385.
+
+203
+00:14:03,520 --> 00:14:13,160
+If you'd hope. So
+let's do squares.
+
+204
+00:14:15,600 --> 00:14:17,710
+So that will take a list of
+
+205
+00:14:17,710 --> 00:14:23,229
+integer and give us
+a list of integer.
+
+206
+00:14:23,229 --> 00:14:25,930
+So we're just gonna square
+every number in the list.
+
+207
+00:14:25,930 --> 00:14:27,910
+So how would I write that?
+
+208
+00:14:27,910 --> 00:14:31,405
+So first I need a formal
+parameter for a list.
+
+209
+00:14:31,405 --> 00:14:33,535
+By convention.
+
+210
+00:14:33,535 --> 00:14:35,860
+If x ranges over integers,
+
+211
+00:14:35,860 --> 00:14:39,865
+I'll use X S, two range
+over list of integers.
+
+212
+00:14:39,865 --> 00:14:41,500
+That's just a convention.
+You can give it
+
+213
+00:14:41,500 --> 00:14:43,720
+any name you want.
+You can call it Fred.
+
+214
+00:14:43,720 --> 00:14:45,280
+Well, I'm going to
+call an excess.
+
+215
+00:14:45,280 --> 00:14:46,570
+That's a nice convention,
+
+216
+00:14:46,570 --> 00:14:49,160
+but don't use it to access.
+
+217
+00:14:51,730 --> 00:14:59,910
+So square of x for x
+drawn from excess.
+
+218
+00:15:04,630 --> 00:15:10,775
+So now I can say squares of
+the numbers from one to ten,
+
+219
+00:15:10,775 --> 00:15:13,340
+I gets the same thing as before.
+
+220
+00:15:13,340 --> 00:15:15,530
+Another cool thing I can
+
+221
+00:15:15,530 --> 00:15:19,880
+do is just pick out some
+numbers from a list.
+
+222
+00:15:19,880 --> 00:15:22,400
+So here I'm going to take
+
+223
+00:15:22,400 --> 00:15:32,900
+a list up odds.
+
+224
+00:15:32,900 --> 00:15:35,540
+So od is defined in Haskell.
+
+225
+00:15:35,540 --> 00:15:37,680
+It's part of the prelude.
+
+226
+00:15:38,080 --> 00:15:40,265
+What do you think that lips,
+
+227
+00:15:40,265 --> 00:15:42,590
+what do you think
+that's going to return?
+
+228
+00:15:42,590 --> 00:15:45,870
+True? Because three is odd.
+
+229
+00:15:46,270 --> 00:15:49,380
+What's that going to return?
+
+230
+00:15:51,730 --> 00:15:54,395
+What's that going to return?
+
+231
+00:15:54,395 --> 00:15:57,510
+False. 0 is even.
+
+232
+00:15:57,970 --> 00:16:02,840
+So odds of xs is equal to,
+
+233
+00:16:02,840 --> 00:16:07,350
+I'm just gonna return x. Whoops.
+
+234
+00:16:07,360 --> 00:16:14,770
+For each x drawn from
+xs such that x is odd.
+
+235
+00:16:14,770 --> 00:16:19,040
+So this will give us all the
+odd numbers in the list.
+
+236
+00:16:22,830 --> 00:16:29,689
+I better do load it. So now od.
+
+237
+00:16:31,080 --> 00:16:36,775
+This gives us, whoa, odds.
+
+238
+00:16:36,775 --> 00:16:41,470
+Thanks. And that gives
+
+239
+00:16:41,470 --> 00:16:44,140
+us all the odd
+numbers between 110.
+
+240
+00:16:44,140 --> 00:16:46,015
+And then if I want to find
+
+241
+00:16:46,015 --> 00:16:49,330
+the squares of the odd
+numbers from one to ten,
+
+242
+00:16:49,330 --> 00:16:53,330
+I could do squares, odds.
+
+243
+00:16:56,640 --> 00:17:01,630
+Or of course I could
+do odds squares.
+
+244
+00:17:01,630 --> 00:17:04,900
+1210. Oops, but it
+
+245
+00:17:04,900 --> 00:17:08,030
+helps if I spelled
+correctly, it doesn't, it?
+
+246
+00:17:09,060 --> 00:17:12,290
+Will that be the same?
+
+247
+00:17:12,690 --> 00:17:16,615
+Let's find out who it's the same.
+
+248
+00:17:16,615 --> 00:17:18,369
+What a funny coincidence.
+
+249
+00:17:18,369 --> 00:17:20,440
+Why is it the same?
+
+250
+00:17:20,440 --> 00:17:27,610
+Yep. Because right.
+
+251
+00:17:27,610 --> 00:17:29,200
+So if you square an odd number,
+
+252
+00:17:29,200 --> 00:17:30,640
+you get an odd number.
+
+253
+00:17:30,640 --> 00:17:32,890
+Exactly. And so that's why
+
+254
+00:17:32,890 --> 00:17:35,605
+either of these happened to
+give you the same answer.
+
+255
+00:17:35,605 --> 00:17:37,300
+Generally, the order in which you
+
+256
+00:17:37,300 --> 00:17:38,865
+do these is very important.
+
+257
+00:17:38,865 --> 00:17:42,690
+In this particular
+case, it is not.
+
+258
+00:17:51,610 --> 00:17:55,910
+Ok. What was my next thing to do?
+
+259
+00:17:55,910 --> 00:18:01,490
+Right? So now we
+
+260
+00:18:01,490 --> 00:18:04,385
+can also put these together
+and do them all at once.
+
+261
+00:18:04,385 --> 00:18:06,320
+So you can build
+big things out of
+
+262
+00:18:06,320 --> 00:18:09,860
+little things or just do
+all the work at once.
+
+263
+00:18:09,860 --> 00:18:13,955
+So actually let's
+do one more thing.
+
+264
+00:18:13,955 --> 00:18:17,720
+Let's find the sum of
+
+265
+00:18:17,720 --> 00:18:27,210
+the squares of the odd
+numbers from one to ten.
+
+266
+00:18:27,550 --> 00:18:31,145
+That happens to be a 165.
+
+267
+00:18:31,145 --> 00:18:36,209
+But we could do some square odd.
+
+268
+00:18:36,400 --> 00:18:39,290
+I'll take a list of
+integers and give
+
+269
+00:18:39,290 --> 00:18:43,140
+us just one integer.
+
+270
+00:18:43,930 --> 00:18:49,640
+Sum square odd of xs will be,
+
+271
+00:18:49,640 --> 00:18:50,930
+I'm, I'm tired of typing Xs.
+
+272
+00:18:50,930 --> 00:18:53,270
+I'm going to type Fred this time.
+
+273
+00:18:53,270 --> 00:18:55,340
+Sum square audits.
+
+274
+00:18:55,340 --> 00:19:03,150
+Fred will be the sum of the
+squares of the odds of Fred.
+
+275
+00:19:06,390 --> 00:19:14,965
+And I can do sum square on
+a Fred. But no, no, no.
+
+276
+00:19:14,965 --> 00:19:17,560
+Fred is the formal
+parameter here.
+
+277
+00:19:17,560 --> 00:19:22,360
+I'm going to give an actual
+parameter of one to ten.
+
+278
+00:19:22,360 --> 00:19:28,750
+Or I can give it
+different actual prime.
+
+279
+00:19:28,750 --> 00:19:30,880
+I can give it my list.
+
+280
+00:19:30,880 --> 00:19:33,610
+Okay? So if you sum the square of
+
+281
+00:19:33,610 --> 00:19:37,105
+all the odd numbers
+there, you get 1299.
+
+282
+00:19:37,105 --> 00:19:41,590
+So notice there's a property
+that expect to hold here.
+
+283
+00:19:41,590 --> 00:19:44,665
+So remember I said do it twice.
+
+284
+00:19:44,665 --> 00:19:46,785
+So let's do it twice.
+
+285
+00:19:46,785 --> 00:19:49,355
+Here's a property
+of sum square odd.
+
+286
+00:19:49,355 --> 00:19:51,260
+So I'm gonna give this
+a list of integers.
+
+287
+00:19:51,260 --> 00:19:55,205
+I'm going to check
+that a property holds.
+
+288
+00:19:55,205 --> 00:19:57,320
+And what's my property?
+
+289
+00:19:57,320 --> 00:20:00,390
+So I'm going to use a
+variable name here.
+
+290
+00:20:00,490 --> 00:20:05,570
+Let's use Fred. And
+the property I want is
+
+291
+00:20:05,570 --> 00:20:11,390
+some square odd of Fred
+should be the same as,
+
+292
+00:20:11,390 --> 00:20:15,170
+the same as is written
+as two equal signs.
+
+293
+00:20:15,170 --> 00:20:22,830
+Some of the squares
+of the odds of Fred.
+
+294
+00:20:26,980 --> 00:20:32,380
+Okay? And let's just
+check that that's true.
+
+295
+00:20:32,380 --> 00:20:42,440
+Does this property hold
+for the list1 to ten?
+
+296
+00:20:42,540 --> 00:20:45,040
+Okay, it's true.
+
+297
+00:20:45,040 --> 00:20:52,285
+Does it hold for
+the list? My list?
+
+298
+00:20:52,285 --> 00:20:55,190
+Gay, it's true.
+
+299
+00:20:55,260 --> 00:20:58,270
+Oh, let's make up lots of
+
+300
+00:20:58,270 --> 00:21:00,640
+random numbers and just lots
+
+301
+00:21:00,640 --> 00:21:03,770
+of random list and try
+it for all of them.
+
+302
+00:21:04,260 --> 00:21:07,270
+So now I need to import
+
+303
+00:21:07,270 --> 00:21:10,970
+a module called test
+dot quick check.
+
+304
+00:21:11,290 --> 00:21:17,675
+Works. Yep, and now I
+can say QuickCheck.
+
+305
+00:21:17,675 --> 00:21:23,490
+Prop sum, square od.
+
+306
+00:21:24,010 --> 00:21:29,330
+Okay. Passed 100 tests.
+
+307
+00:21:29,330 --> 00:21:31,775
+So it made up a live,
+
+308
+00:21:31,775 --> 00:21:35,495
+a 100 different lists, integers.
+
+309
+00:21:35,495 --> 00:21:37,430
+And it tried it on all of them.
+
+310
+00:21:37,430 --> 00:21:41,460
+And every single
+time it got true.
+
+311
+00:21:43,900 --> 00:21:47,795
+To see if I've got an example
+where it gets thoughts.
+
+312
+00:21:47,795 --> 00:21:52,790
+So to naming some names
+for these things,
+
+313
+00:21:52,790 --> 00:21:54,950
+this is pronounced drawn from
+
+314
+00:21:54,950 --> 00:21:58,235
+and X drawn from one to three
+is called the generator.
+
+315
+00:21:58,235 --> 00:22:00,960
+The arrow is called drawn from.
+
+316
+00:22:01,780 --> 00:22:04,880
+When you white some
+condition here,
+
+317
+00:22:04,880 --> 00:22:07,790
+it could be odd of x, it
+could be x greater than 0.
+
+318
+00:22:07,790 --> 00:22:10,550
+It could be a character
+is alphanumeric.
+
+319
+00:22:10,550 --> 00:22:13,350
+That's called a guard.
+
+320
+00:22:15,720 --> 00:22:17,740
+We've already seen how to do
+
+321
+00:22:17,740 --> 00:22:20,275
+factorial and we've
+seen some square Odds.
+
+322
+00:22:20,275 --> 00:22:22,465
+We've seen QuickCheck.
+
+323
+00:22:22,465 --> 00:22:24,460
+Alright, I wanted
+to tell you very
+
+324
+00:22:24,460 --> 00:22:25,915
+briefly because
+you'll need it for,
+
+325
+00:22:25,915 --> 00:22:27,280
+not this week's tutorial,
+
+326
+00:22:27,280 --> 00:22:29,095
+but next week's tutorial.
+
+327
+00:22:29,095 --> 00:22:31,150
+There are three
+functions on lists.
+
+328
+00:22:31,150 --> 00:22:33,415
+Had it gives you
+the first element,
+
+329
+00:22:33,415 --> 00:22:36,970
+tail gives you everything
+but the first element,
+
+330
+00:22:36,970 --> 00:22:43,345
+the single colon is pronounced
+Cons, short for construct.
+
+331
+00:22:43,345 --> 00:22:45,160
+And it just puts
+
+332
+00:22:45,160 --> 00:22:47,230
+a thing at the very
+beginning of the list.
+
+333
+00:22:47,230 --> 00:22:48,940
+So one put at the
+beginning of the list
+
+334
+00:22:48,940 --> 00:22:51,850
+to three, gives you 123.
+
+335
+00:22:51,850 --> 00:22:54,640
+And then here's a
+property we could check.
+
+336
+00:22:54,640 --> 00:22:56,605
+Given a list of integers,
+
+337
+00:22:56,605 --> 00:22:59,690
+either it should be
+the empty list, right?
+
+338
+00:22:59,690 --> 00:23:02,105
+You can take the head or
+tail of an empty list.
+
+339
+00:23:02,105 --> 00:23:03,935
+So either it should
+be the empty list
+
+340
+00:23:03,935 --> 00:23:05,885
+or, oops, that's misspelled.
+
+341
+00:23:05,885 --> 00:23:07,520
+That should be
+spelled vertical bar.
+
+342
+00:23:07,520 --> 00:23:11,780
+Vertical bar had x's colon
+tail xs is equal to xs.
+
+343
+00:23:11,780 --> 00:23:14,520
+We can try that one out.
+
+344
+00:23:21,220 --> 00:23:26,255
+You know, there we go.
+
+345
+00:23:26,255 --> 00:23:27,830
+So there's the property.
+
+346
+00:23:27,830 --> 00:23:30,170
+Let's make this
+screen what there?
+
+347
+00:23:30,170 --> 00:23:32,300
+So I wrote or in the
+slide, I will fix it.
+
+348
+00:23:32,300 --> 00:23:34,205
+It should be double vertical bar.
+
+349
+00:23:34,205 --> 00:23:38,060
+And I can run this road
+one mA and now again,
+
+350
+00:23:38,060 --> 00:23:40,380
+I can do the same thing.
+
+351
+00:23:40,590 --> 00:23:48,190
+Quick. Check. Prop head, tail.
+
+352
+00:23:48,190 --> 00:23:50,710
+Okay, passed 100 tests.
+
+353
+00:23:50,710 --> 00:23:52,285
+Knows if I got it wrong,
+
+354
+00:23:52,285 --> 00:23:53,875
+it can help me find it right.
+
+355
+00:23:53,875 --> 00:23:55,945
+It's very important to
+remember or you can't
+
+356
+00:23:55,945 --> 00:23:59,080
+take head or tail
+of the empty list.
+
+357
+00:23:59,080 --> 00:24:05,390
+So what if I leave this
+out and do it again?
+
+358
+00:24:06,600 --> 00:24:11,365
+Failed falsifiable
+after one test.
+
+359
+00:24:11,365 --> 00:24:14,180
+Doesn't work for the empty list.
+
+360
+00:24:17,580 --> 00:24:20,635
+Okay, so what have we learn?
+
+361
+00:24:20,635 --> 00:24:22,810
+Number is Tikki, Tikki,
+
+362
+00:24:22,810 --> 00:24:27,470
+Tikki lists, list comprehensions.
+
+363
+00:24:27,470 --> 00:24:31,865
+Rush. Do it twice.
+
+364
+00:24:31,865 --> 00:24:33,800
+The computer can help
+
+365
+00:24:33,800 --> 00:24:37,220
+you check that what you've
+done is consistent,
+
+366
+00:24:37,220 --> 00:24:39,170
+that the property, if you
+believe, should hold,
+
+367
+00:24:39,170 --> 00:24:43,110
+do whole and can
+reveal errors for you.

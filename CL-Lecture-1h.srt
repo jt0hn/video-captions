@@ -1,0 +1,1022 @@
+1
+00:00:00,000 --> 00:00:02,970
+In this video, we're
+going to look at how to
+
+2
+00:00:02,970 --> 00:00:07,050
+code up our simple
+universe in Haskell.
+
+3
+00:00:07,050 --> 00:00:10,875
+This is the universe we had with
+
+4
+00:00:10,875 --> 00:00:16,484
+nine triangles and
+desks, various colors.
+
+5
+00:00:16,484 --> 00:00:18,705
+And we made statements
+about them.
+
+6
+00:00:18,705 --> 00:00:21,015
+So we've discussed that
+what we're going to do
+
+7
+00:00:21,015 --> 00:00:24,135
+now is to code it in Haskell.
+
+8
+00:00:24,135 --> 00:00:25,980
+So we can write queries in
+
+9
+00:00:25,980 --> 00:00:28,905
+Haskell corresponding
+to those statements.
+
+10
+00:00:28,905 --> 00:00:31,140
+The first thing we
+have to do is to look
+
+11
+00:00:31,140 --> 00:00:33,555
+at describing the universe.
+
+12
+00:00:33,555 --> 00:00:37,535
+In Haskell, everything
+has a type.
+
+13
+00:00:37,535 --> 00:00:40,850
+We don't want to
+describe the universe by
+
+14
+00:00:40,850 --> 00:00:44,360
+coding it up with integers
+or something like that.
+
+15
+00:00:44,360 --> 00:00:47,840
+We want to just talk about
+the things in the universe.
+
+16
+00:00:47,840 --> 00:00:51,110
+So what we're going
+to do is to introduce
+
+17
+00:00:51,110 --> 00:00:54,230
+their names as elements
+
+18
+00:00:54,230 --> 00:00:57,785
+of a special type that we
+create out of nowhere.
+
+19
+00:00:57,785 --> 00:01:01,415
+Then we'll describe
+their properties
+
+20
+00:01:01,415 --> 00:01:05,360
+by defining functions in Haskell.
+
+21
+00:01:05,360 --> 00:01:08,780
+So the first thing we
+have to do is to create
+
+22
+00:01:08,780 --> 00:01:14,270
+a type with nine things
+whose names are RST U,
+
+23
+00:01:14,270 --> 00:01:17,250
+V, W, X, Y, Z.
+
+24
+00:01:17,790 --> 00:01:21,190
+That's done very
+simply in Haskell,
+
+25
+00:01:21,190 --> 00:01:23,680
+we simply make a
+data declaration.
+
+26
+00:01:23,680 --> 00:01:25,360
+This is just about the simplest
+
+27
+00:01:25,360 --> 00:01:27,400
+data declaration we can make.
+
+28
+00:01:27,400 --> 00:01:32,440
+We say a thing is either R or S,
+
+29
+00:01:32,440 --> 00:01:34,075
+or T, or U,
+
+30
+00:01:34,075 --> 00:01:37,810
+or V, or W, or X, or Y or Z.
+
+31
+00:01:37,810 --> 00:01:41,395
+What that does, that declaration
+
+32
+00:01:41,395 --> 00:01:45,639
+creates a type called thing.
+
+33
+00:01:45,639 --> 00:01:48,550
+And there are nine values of
+
+34
+00:01:48,550 --> 00:01:51,400
+type thing and their
+names are RST U,
+
+35
+00:01:51,400 --> 00:01:53,990
+V, W, X, Y, Z.
+
+36
+00:01:54,300 --> 00:01:58,540
+We can take things and
+put them in a list,
+
+37
+00:01:58,540 --> 00:02:03,410
+for instance, as we can with
+objects of any given type.
+
+38
+00:02:03,410 --> 00:02:08,735
+So we can define the
+list of things to be R,
+
+39
+00:02:08,735 --> 00:02:10,370
+S, T, U, V, W, X,
+
+40
+00:02:10,370 --> 00:02:12,485
+Y, Z, all put analyst.
+
+41
+00:02:12,485 --> 00:02:14,405
+And that's a list of length
+
+42
+00:02:14,405 --> 00:02:18,245
+nine containing all the
+things in our universe.
+
+43
+00:02:18,245 --> 00:02:21,110
+The first description
+we're going to give of
+
+44
+00:02:21,110 --> 00:02:22,670
+the universe is going to be in
+
+45
+00:02:22,670 --> 00:02:24,935
+terms of the features
+of the things,
+
+46
+00:02:24,935 --> 00:02:27,860
+have color, shape, and size.
+
+47
+00:02:27,860 --> 00:02:29,210
+To deal with colors,
+
+48
+00:02:29,210 --> 00:02:33,695
+shapes and sizes will
+introduce three more types.
+
+49
+00:02:33,695 --> 00:02:35,645
+A type color, type,
+
+50
+00:02:35,645 --> 00:02:38,315
+shape, and a type size.
+
+51
+00:02:38,315 --> 00:02:39,680
+Again, we'll use one of
+
+52
+00:02:39,680 --> 00:02:42,350
+these enumerated type definitions
+
+53
+00:02:42,350 --> 00:02:43,940
+for each of these types.
+
+54
+00:02:43,940 --> 00:02:46,520
+So we're just creating in
+
+55
+00:02:46,520 --> 00:02:50,405
+Haskell types for the things
+you want to talk about.
+
+56
+00:02:50,405 --> 00:02:53,060
+We talk about these three colors.
+
+57
+00:02:53,060 --> 00:02:54,590
+We could add more if we wanted to
+
+58
+00:02:54,590 --> 00:02:57,740
+have a bigger palette of colors,
+
+59
+00:02:57,740 --> 00:03:00,440
+we talk about these two shapes.
+
+60
+00:03:00,440 --> 00:03:01,970
+Again, we could have more.
+
+61
+00:03:01,970 --> 00:03:07,265
+And we talk about these
+two sizes, big and small.
+
+62
+00:03:07,265 --> 00:03:14,630
+The features will be functions
+from things to colors,
+
+63
+00:03:14,630 --> 00:03:19,310
+from things to shape,
+things to size.
+
+64
+00:03:19,310 --> 00:03:21,380
+We're going to define
+
+65
+00:03:21,380 --> 00:03:26,750
+a function color such
+that the color of t,
+
+66
+00:03:26,750 --> 00:03:29,555
+for instance, is blue.
+
+67
+00:03:29,555 --> 00:03:33,425
+While the color of u will be red.
+
+68
+00:03:33,425 --> 00:03:36,570
+We can do this simply in Haskell.
+
+69
+00:03:37,720 --> 00:03:43,235
+We say data color is
+red or blue or green.
+
+70
+00:03:43,235 --> 00:03:48,860
+We're defining a function
+colour of type, thing to color.
+
+71
+00:03:48,860 --> 00:03:51,605
+And we just look,
+
+72
+00:03:51,605 --> 00:03:54,125
+color of R is green.
+
+73
+00:03:54,125 --> 00:03:55,550
+So we write that down.
+
+74
+00:03:55,550 --> 00:03:57,665
+Color of S is green,
+
+75
+00:03:57,665 --> 00:04:01,160
+colour of T is blue, and so on.
+
+76
+00:04:01,160 --> 00:04:06,320
+We just list or
+enumerate these clauses.
+
+77
+00:04:06,320 --> 00:04:08,960
+And that creates a color in
+
+78
+00:04:08,960 --> 00:04:12,545
+Haskell that gives everything
+the correct color.
+
+79
+00:04:12,545 --> 00:04:15,090
+If we've defined it correctly.
+
+80
+00:04:17,070 --> 00:04:20,845
+We could give similar definitions
+
+81
+00:04:20,845 --> 00:04:25,195
+for shape and size for
+each of the objects.
+
+82
+00:04:25,195 --> 00:04:30,940
+So we'd have then our
+type thing or type color,
+
+83
+00:04:30,940 --> 00:04:34,285
+our type shape, type size.
+
+84
+00:04:34,285 --> 00:04:36,550
+We'd have features which are
+
+85
+00:04:36,550 --> 00:04:40,120
+functions from things to colors,
+
+86
+00:04:40,120 --> 00:04:43,330
+things to shapes,
+things, thesises.
+
+87
+00:04:43,330 --> 00:04:46,060
+And if we start to describe
+
+88
+00:04:46,060 --> 00:04:49,840
+any real situation in this way,
+
+89
+00:04:49,840 --> 00:04:51,070
+we get an awful lot of
+
+90
+00:04:51,070 --> 00:04:52,450
+different types and we have
+
+91
+00:04:52,450 --> 00:04:54,130
+to treat them all differently.
+
+92
+00:04:54,130 --> 00:04:56,200
+So instead of doing that,
+
+93
+00:04:56,200 --> 00:05:00,030
+we're going to describe
+things in the universe,
+
+94
+00:05:00,030 --> 00:05:03,245
+introducing predicates
+that describe
+
+95
+00:05:03,245 --> 00:05:05,820
+the properties that they have.
+
+96
+00:05:06,190 --> 00:05:12,095
+So for instance, it is
+true that T is blue.
+
+97
+00:05:12,095 --> 00:05:14,960
+It is true that zed is blue,
+
+98
+00:05:14,960 --> 00:05:19,085
+but it's false that u is blue.
+
+99
+00:05:19,085 --> 00:05:20,540
+We can describe all of
+
+100
+00:05:20,540 --> 00:05:24,575
+our features by giving
+predicates instead.
+
+101
+00:05:24,575 --> 00:05:26,270
+And that's a lot more uniform.
+
+102
+00:05:26,270 --> 00:05:29,000
+We will use the same
+kind of thing to
+
+103
+00:05:29,000 --> 00:05:32,435
+describe the predicate
+of being read,
+
+104
+00:05:32,435 --> 00:05:34,400
+the predicate of being a disc,
+
+105
+00:05:34,400 --> 00:05:36,635
+and the predicate of being large.
+
+106
+00:05:36,635 --> 00:05:38,930
+So the large red disc would
+
+107
+00:05:38,930 --> 00:05:42,690
+satisfy all three of
+those predicates.
+
+108
+00:05:43,470 --> 00:05:46,749
+On the other hand, it's false.
+
+109
+00:05:46,749 --> 00:05:48,955
+For instance, that
+zed is a triangle.
+
+110
+00:05:48,955 --> 00:05:54,415
+It's false that r is big and
+it's false that u is small.
+
+111
+00:05:54,415 --> 00:05:57,700
+So we'll define what
+things are big,
+
+112
+00:05:57,700 --> 00:05:59,050
+what things are small.
+
+113
+00:05:59,050 --> 00:06:03,925
+Not by saying we have a function
+which gives the feature,
+
+114
+00:06:03,925 --> 00:06:06,130
+but by saying we
+have a predicate,
+
+115
+00:06:06,130 --> 00:06:09,505
+which tells us a
+predicate is a function
+
+116
+00:06:09,505 --> 00:06:13,540
+from things in the universe
+to the Boolean values.
+
+117
+00:06:13,540 --> 00:06:17,260
+And we can say that very
+succinctly in Haskell,
+
+118
+00:06:17,260 --> 00:06:22,540
+we say type predicate
+equals thing arrows bool.
+
+119
+00:06:22,540 --> 00:06:25,260
+Thereafter we can use predicate.
+
+120
+00:06:25,260 --> 00:06:28,190
+When we're talking
+about that type,
+
+121
+00:06:28,190 --> 00:06:31,085
+bool is the boolean type.
+
+122
+00:06:31,085 --> 00:06:33,440
+And in fact, BU,
+
+123
+00:06:33,440 --> 00:06:35,825
+although it's introduced
+in the prelude,
+
+124
+00:06:35,825 --> 00:06:38,810
+is actually defined in terms
+
+125
+00:06:38,810 --> 00:06:42,125
+of constructors false and true.
+
+126
+00:06:42,125 --> 00:06:45,845
+Once we got this
+type abbreviation,
+
+127
+00:06:45,845 --> 00:06:48,980
+we say predicate to
+mean thing arrows bool.
+
+128
+00:06:48,980 --> 00:06:51,110
+Then we can use it.
+
+129
+00:06:51,110 --> 00:06:54,350
+As before, we declare
+
+130
+00:06:54,350 --> 00:06:59,405
+the data type thing as
+an enumerated type.
+
+131
+00:06:59,405 --> 00:07:02,300
+We have the data type of things.
+
+132
+00:07:02,300 --> 00:07:04,700
+We have a list of all things.
+
+133
+00:07:04,700 --> 00:07:07,310
+We're going to
+define a predicate.
+
+134
+00:07:07,310 --> 00:07:09,305
+The thing arrows bow.
+
+135
+00:07:09,305 --> 00:07:11,915
+Then we're going to
+define predicates.
+
+136
+00:07:11,915 --> 00:07:14,375
+Is red, is blue, is green,
+
+137
+00:07:14,375 --> 00:07:16,010
+is disk, is triangle,
+
+138
+00:07:16,010 --> 00:07:18,125
+is small, and is big.
+
+139
+00:07:18,125 --> 00:07:20,525
+And all of those
+will be predicates.
+
+140
+00:07:20,525 --> 00:07:23,400
+We define those predicates.
+
+141
+00:07:23,620 --> 00:07:26,540
+This is just repeated
+up here and we wouldn't
+
+142
+00:07:26,540 --> 00:07:28,865
+repeat it to cause
+in a Haskell file.
+
+143
+00:07:28,865 --> 00:07:31,159
+But it's just to remind
+us that the context,
+
+144
+00:07:31,159 --> 00:07:33,140
+we have a data type thing.
+
+145
+00:07:33,140 --> 00:07:36,125
+It has all these values
+
+146
+00:07:36,125 --> 00:07:38,660
+and those are the
+only values we have.
+
+147
+00:07:38,660 --> 00:07:42,440
+So in order to say whether
+something's a disc,
+
+148
+00:07:42,440 --> 00:07:48,110
+we can say, well it's a disk
+if it's r or u, or y or z.
+
+149
+00:07:48,110 --> 00:07:50,270
+So is disc R is true,
+
+150
+00:07:50,270 --> 00:07:52,100
+is this, U is true,
+
+151
+00:07:52,100 --> 00:07:53,930
+is this Y is true,
+
+152
+00:07:53,930 --> 00:07:58,055
+and is disk Zed is true
+for anything else.
+
+153
+00:07:58,055 --> 00:08:00,860
+And that's what this
+wildcard underscore does
+
+154
+00:08:00,860 --> 00:08:04,070
+for anything else
+is disk is false.
+
+155
+00:08:04,070 --> 00:08:06,665
+So we only need to mention
+
+156
+00:08:06,665 --> 00:08:09,110
+these four disks and
+
+157
+00:08:09,110 --> 00:08:11,915
+then say that nothing
+else is a disk.
+
+158
+00:08:11,915 --> 00:08:17,015
+Then we can say that
+something is a triangle.
+
+159
+00:08:17,015 --> 00:08:19,235
+It's not a desk.
+
+160
+00:08:19,235 --> 00:08:23,090
+And remember, predicates
+are functions.
+
+161
+00:08:23,090 --> 00:08:27,455
+So to define what
+is triangle means,
+
+162
+00:08:27,455 --> 00:08:31,025
+we say is triangle of x.
+
+163
+00:08:31,025 --> 00:08:33,380
+The value of that is
+
+164
+00:08:33,380 --> 00:08:37,880
+the negation of the
+value of is disk of X.
+
+165
+00:08:37,880 --> 00:08:40,070
+So we check whether it's a desk.
+
+166
+00:08:40,070 --> 00:08:43,580
+If that's true, then
+it's not a triangle.
+
+167
+00:08:43,580 --> 00:08:46,190
+If that's false, then
+it is a triangle.
+
+168
+00:08:46,190 --> 00:08:49,100
+These declarations show you
+
+169
+00:08:49,100 --> 00:08:50,945
+an important feature of Haskell.
+
+170
+00:08:50,945 --> 00:08:53,585
+And if you haven't seen the
+Haskell thread already,
+
+171
+00:08:53,585 --> 00:08:55,760
+I'll just pointed out briefly,
+
+172
+00:08:55,760 --> 00:09:02,060
+when we introduce these
+values in a data declaration,
+
+173
+00:09:02,060 --> 00:09:04,220
+we use capital letters.
+
+174
+00:09:04,220 --> 00:09:07,325
+These are things
+called constructors.
+
+175
+00:09:07,325 --> 00:09:09,320
+They're not variables then
+
+176
+00:09:09,320 --> 00:09:13,025
+names for things in the
+type we've introduced.
+
+177
+00:09:13,025 --> 00:09:17,495
+We can use those
+constructors as patterns.
+
+178
+00:09:17,495 --> 00:09:19,280
+Here the pattern is very simple.
+
+179
+00:09:19,280 --> 00:09:21,035
+It just says if it's r,
+
+180
+00:09:21,035 --> 00:09:24,575
+do this, if it's you
+do this, and so on.
+
+181
+00:09:24,575 --> 00:09:28,100
+We can use those as patterns
+when we're defining
+
+182
+00:09:28,100 --> 00:09:30,590
+functions by saying what value
+
+183
+00:09:30,590 --> 00:09:33,200
+they have for a given variable,
+
+184
+00:09:33,200 --> 00:09:37,250
+then that variable always
+starts with a lowercase.
+
+185
+00:09:37,250 --> 00:09:42,920
+So is triangle, X is not
+the value of is disk of X.
+
+186
+00:09:42,920 --> 00:09:46,280
+This X could be any one of these.
+
+187
+00:09:46,280 --> 00:09:48,470
+Whereas in these declarations,
+
+188
+00:09:48,470 --> 00:09:51,590
+These are just stands for that.
+
+189
+00:09:51,590 --> 00:09:55,940
+We have operations in
+Haskell on Booleans.
+
+190
+00:09:55,940 --> 00:09:58,520
+These operations correspond to
+
+191
+00:09:58,520 --> 00:10:02,000
+the Boolean operations
+we've already talked about.
+
+192
+00:10:02,000 --> 00:10:07,100
+We have constants true and
+false because the Boolean type
+
+193
+00:10:07,100 --> 00:10:09,710
+was introduced as
+an enumerated type
+
+194
+00:10:09,710 --> 00:10:12,575
+with the value is false and true.
+
+195
+00:10:12,575 --> 00:10:18,454
+Then we have infix
+functions and or,
+
+196
+00:10:18,454 --> 00:10:23,300
+which correspond to the
+logical AND logical OR.
+
+197
+00:10:23,300 --> 00:10:29,820
+And we have negation or not
+which corresponds to not.
+
+198
+00:10:30,190 --> 00:10:33,800
+This not goes from bowl to BU.
+
+199
+00:10:33,800 --> 00:10:38,030
+Will also need to introduce
+the negation on predicates,
+
+200
+00:10:38,030 --> 00:10:39,770
+which we'll do shortly.
+
+201
+00:10:39,770 --> 00:10:42,500
+Continuing with our example,
+
+202
+00:10:42,500 --> 00:10:44,870
+we can also define
+the predicate is
+
+203
+00:10:44,870 --> 00:10:48,935
+read by saying we have
+these two red things.
+
+204
+00:10:48,935 --> 00:10:50,570
+It's true for these,
+
+205
+00:10:50,570 --> 00:10:52,084
+it's false for these,
+
+206
+00:10:52,084 --> 00:10:54,665
+false for anything else is blue,
+
+207
+00:10:54,665 --> 00:10:57,590
+is true for these
+three blue things.
+
+208
+00:10:57,590 --> 00:10:59,540
+And false for anything else.
+
+209
+00:10:59,540 --> 00:11:02,090
+When we come to is green,
+
+210
+00:11:02,090 --> 00:11:05,360
+we can make another function
+definition to define
+
+211
+00:11:05,360 --> 00:11:09,780
+this in terms of the values
+of his red and blue.
+
+212
+00:11:11,350 --> 00:11:16,115
+We can do a similar thing
+with is small and is big.
+
+213
+00:11:16,115 --> 00:11:18,350
+We list the small things,
+
+214
+00:11:18,350 --> 00:11:21,605
+are S, v and x are small.
+
+215
+00:11:21,605 --> 00:11:24,455
+Anything else is not small.
+
+216
+00:11:24,455 --> 00:11:27,620
+Something's big.
+If it's not small.
+
+217
+00:11:27,620 --> 00:11:29,570
+This is correct.
+
+218
+00:11:29,570 --> 00:11:33,005
+But no real Haskell programmer
+would write it this way.
+
+219
+00:11:33,005 --> 00:11:36,350
+They would write not dot is
+
+220
+00:11:36,350 --> 00:11:41,809
+small.com two functions is small.
+
+221
+00:11:41,809 --> 00:11:44,930
+Function from things to Booleans.
+
+222
+00:11:44,930 --> 00:11:48,560
+Not is a function from
+Booleans to booleans.
+
+223
+00:11:48,560 --> 00:11:50,270
+And when we compose them,
+
+224
+00:11:50,270 --> 00:11:52,070
+we get the effect of
+
+225
+00:11:52,070 --> 00:11:54,695
+the definition on
+the previous slide.
+
+226
+00:11:54,695 --> 00:11:56,630
+But much more succinctly,
+
+227
+00:11:56,630 --> 00:12:00,215
+you'll learn to use
+function composition a lot
+
+228
+00:12:00,215 --> 00:12:02,450
+and not introduce variables
+
+229
+00:12:02,450 --> 00:12:05,790
+like X in our
+previous definition.

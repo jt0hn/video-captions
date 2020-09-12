@@ -1,0 +1,752 @@
+1
+00:00:00,380 --> 00:00:04,200
+Hello, I'm Michael
+form and this is
+
+2
+00:00:04,200 --> 00:00:05,760
+the first video in
+
+3
+00:00:05,760 --> 00:00:08,925
+the computation and logic
+stream of implant a,
+
+4
+00:00:08,925 --> 00:00:10,200
+The University of Edinburgh.
+
+5
+00:00:10,200 --> 00:00:12,419
+And we're going to start
+right at the beginning.
+
+6
+00:00:12,419 --> 00:00:15,360
+Looking at binary data.
+
+7
+00:00:15,360 --> 00:00:19,680
+Informatics is the study
+of systems that store,
+
+8
+00:00:19,680 --> 00:00:22,635
+process and communicate
+information.
+
+9
+00:00:22,635 --> 00:00:25,575
+We're going to look at
+that in some detail,
+
+10
+00:00:25,575 --> 00:00:28,110
+but we're going to
+keep it simple.
+
+11
+00:00:28,110 --> 00:00:33,730
+Even simple systems can have
+quite complex behaviors.
+
+12
+00:00:33,730 --> 00:00:38,780
+We're going to begin by
+asking, what is information.
+
+13
+00:00:38,780 --> 00:00:42,980
+We're going to find the
+simplest answer we can imagine.
+
+14
+00:00:42,980 --> 00:00:44,750
+And then study that.
+
+15
+00:00:44,750 --> 00:00:46,625
+We go to the dictionary.
+
+16
+00:00:46,625 --> 00:00:50,120
+We find that information
+is knowledge
+
+17
+00:00:50,120 --> 00:00:54,635
+communicated concerning
+some particular fact,
+
+18
+00:00:54,635 --> 00:00:57,020
+subject or event.
+
+19
+00:00:57,020 --> 00:00:59,750
+That of which one
+is the prized or
+
+20
+00:00:59,750 --> 00:01:03,065
+told intelligence or news.
+
+21
+00:01:03,065 --> 00:01:08,330
+So knowledge communicated
+is information.
+
+22
+00:01:08,330 --> 00:01:10,460
+And information is about
+
+23
+00:01:10,460 --> 00:01:14,150
+some particular fact,
+subject or event.
+
+24
+00:01:14,150 --> 00:01:17,585
+It's something we
+can be told learn.
+
+25
+00:01:17,585 --> 00:01:21,365
+So we can get it from
+sensors from other people.
+
+26
+00:01:21,365 --> 00:01:26,359
+We see in 1387 already the
+mention of information.
+
+27
+00:01:26,359 --> 00:01:28,850
+So this is not a new concept.
+
+28
+00:01:28,850 --> 00:01:30,920
+It's very old concept,
+
+29
+00:01:30,920 --> 00:01:33,650
+but we're looking at it
+in a very new context,
+
+30
+00:01:33,650 --> 00:01:35,150
+in a historical sense.
+
+31
+00:01:35,150 --> 00:01:38,120
+So that's already
+Knowledge communicated.
+
+32
+00:01:38,120 --> 00:01:44,450
+In 1793. There's talk of a
+very considerable information.
+
+33
+00:01:44,450 --> 00:01:46,580
+So this introduces the
+idea that we can have
+
+34
+00:01:46,580 --> 00:01:48,695
+more or less information.
+
+35
+00:01:48,695 --> 00:01:50,090
+And as I said,
+we're going to look
+
+36
+00:01:50,090 --> 00:01:51,410
+at the simplest example.
+
+37
+00:01:51,410 --> 00:01:52,790
+It turns out there are
+
+38
+00:01:52,790 --> 00:01:55,340
+items of information
+that are indivisible,
+
+39
+00:01:55,340 --> 00:01:57,110
+bits of information that are
+
+40
+00:01:57,110 --> 00:01:59,300
+the smallest possible amount of
+
+41
+00:01:59,300 --> 00:02:02,555
+information you can get
+and will come to them.
+
+42
+00:02:02,555 --> 00:02:04,865
+And that's what we'll
+study to start with.
+
+43
+00:02:04,865 --> 00:02:08,180
+Then we have in 1852 to use a.
+
+44
+00:02:08,180 --> 00:02:10,250
+Similarly, the brain may be
+
+45
+00:02:10,250 --> 00:02:14,090
+likened to Great Central
+Telegraph Office,
+
+46
+00:02:14,090 --> 00:02:15,500
+to which the wires,
+
+47
+00:02:15,500 --> 00:02:20,195
+nerves convey the information
+from all parts of the body.
+
+48
+00:02:20,195 --> 00:02:24,650
+So here we have the idea that
+information in nerves and
+
+49
+00:02:24,650 --> 00:02:29,360
+information traveling along
+wires are both similar.
+
+50
+00:02:29,360 --> 00:02:32,840
+And of course nowadays
+we have information
+
+51
+00:02:32,840 --> 00:02:37,280
+travelling on nerves just
+as they did in 1852.
+
+52
+00:02:37,280 --> 00:02:40,340
+But the information
+traveling along wires is a
+
+53
+00:02:40,340 --> 00:02:44,450
+lot more sophisticated
+than it was in 1852.
+
+54
+00:02:44,450 --> 00:02:48,110
+In 1927, we have the
+grapevine system,
+
+55
+00:02:48,110 --> 00:02:50,210
+whereby information travels very
+
+56
+00:02:50,210 --> 00:02:55,140
+rapidly through the length and
+breadth of the underworld.
+
+57
+00:02:55,270 --> 00:03:00,230
+Nowadays, we have the
+internet through which
+
+58
+00:03:00,230 --> 00:03:02,750
+information travels
+very rapidly through
+
+59
+00:03:02,750 --> 00:03:05,390
+the length and breadth
+of the underworld.
+
+60
+00:03:05,390 --> 00:03:06,785
+We not only have the,
+
+61
+00:03:06,785 --> 00:03:08,810
+the web, we have the dark web.
+
+62
+00:03:08,810 --> 00:03:11,540
+That's not a new thing,
+that's an old thing.
+
+63
+00:03:11,540 --> 00:03:14,705
+That information can be misused,
+
+64
+00:03:14,705 --> 00:03:17,550
+can be for good or for evil.
+
+65
+00:03:26,160 --> 00:03:30,895
+I went to Google and search
+for examples of information.
+
+66
+00:03:30,895 --> 00:03:33,550
+And this is what I found
+is one of the many,
+
+67
+00:03:33,550 --> 00:03:36,309
+many, many things
+that Google returned.
+
+68
+00:03:36,309 --> 00:03:39,160
+Examples of
+information we collect
+
+69
+00:03:39,160 --> 00:03:43,135
+and analyze times, places,
+
+70
+00:03:43,135 --> 00:03:49,450
+events, your activities,
+details of your hardware,
+
+71
+00:03:49,450 --> 00:03:51,355
+details of your connection.
+
+72
+00:03:51,355 --> 00:03:53,455
+When they take your data,
+
+73
+00:03:53,455 --> 00:03:56,500
+they take all these
+sorts of information,
+
+74
+00:03:56,500 --> 00:04:05,210
+pictures, numbers,
+sounds, and so on.
+
+75
+00:04:05,210 --> 00:04:07,610
+And convert them into
+
+76
+00:04:07,610 --> 00:04:11,615
+computer data in the
+form of zeros and ones.
+
+77
+00:04:11,615 --> 00:04:13,310
+And we're going to look in
+
+78
+00:04:13,310 --> 00:04:16,250
+slightly more detail
+at that process of
+
+79
+00:04:16,250 --> 00:04:22,415
+taking information and converting
+it into zeros and ones.
+
+80
+00:04:22,415 --> 00:04:25,580
+So information for us is going to
+
+81
+00:04:25,580 --> 00:04:28,940
+be about answers to questions,
+
+82
+00:04:28,940 --> 00:04:31,610
+who, what, where, when,
+
+83
+00:04:31,610 --> 00:04:35,600
+why, and how,
+questions and answers.
+
+84
+00:04:35,600 --> 00:04:38,295
+And we're going to
+see how answers,
+
+85
+00:04:38,295 --> 00:04:43,204
+the questions can be broken
+down into zeros and ones.
+
+86
+00:04:43,204 --> 00:04:47,390
+As I said, our motto
+is to keep it simple.
+
+87
+00:04:47,390 --> 00:04:50,360
+Keep it simple. Principle states
+
+88
+00:04:50,360 --> 00:04:53,239
+that most systems work best.
+
+89
+00:04:53,239 --> 00:04:54,665
+If they kept simple,
+
+90
+00:04:54,665 --> 00:04:56,705
+rather them made complicated.
+
+91
+00:04:56,705 --> 00:04:59,600
+And that's normally applied
+
+92
+00:04:59,600 --> 00:05:03,560
+as a principle of
+practical engineering.
+
+93
+00:05:03,560 --> 00:05:06,290
+But it's also a
+very good principle
+
+94
+00:05:06,290 --> 00:05:09,215
+of theoretical investigation.
+
+95
+00:05:09,215 --> 00:05:10,880
+We're going to look for
+
+96
+00:05:10,880 --> 00:05:15,350
+simple examples and
+examine them in detail.
+
+97
+00:05:15,350 --> 00:05:17,645
+We're going to look
+at simple questions.
+
+98
+00:05:17,645 --> 00:05:21,080
+Simple questions are questions
+that have simple answers.
+
+99
+00:05:21,080 --> 00:05:23,495
+So the first simplification
+will look at
+
+100
+00:05:23,495 --> 00:05:27,034
+is that every question
+gets announcer.
+
+101
+00:05:27,034 --> 00:05:31,220
+So there is at least one
+will eliminate questions
+
+102
+00:05:31,220 --> 00:05:33,080
+with no answers or questions that
+
+103
+00:05:33,080 --> 00:05:35,405
+don't give you announcer,
+
+104
+00:05:35,405 --> 00:05:39,215
+We assume that the answer
+comes within a finite time,
+
+105
+00:05:39,215 --> 00:05:43,160
+then we want questions
+that are not fuzzy.
+
+106
+00:05:43,160 --> 00:05:44,510
+We don't want questions where
+
+107
+00:05:44,510 --> 00:05:47,000
+the answer is vague or imprecise.
+
+108
+00:05:47,000 --> 00:05:50,315
+We want a question that
+gives a precise answer.
+
+109
+00:05:50,315 --> 00:05:51,950
+And we're going to actually make
+
+110
+00:05:51,950 --> 00:05:53,585
+it even simpler than that.
+
+111
+00:05:53,585 --> 00:05:56,150
+We're going to look at
+questions that only have
+
+112
+00:05:56,150 --> 00:05:59,165
+a finite number of
+possible answers.
+
+113
+00:05:59,165 --> 00:06:01,415
+And to keep simplifying,
+
+114
+00:06:01,415 --> 00:06:04,925
+we've eliminated
+questions with 0 answers,
+
+115
+00:06:04,925 --> 00:06:07,505
+questions with one. I'll answer.
+
+116
+00:06:07,505 --> 00:06:09,650
+Our big, uninteresting.
+
+117
+00:06:09,650 --> 00:06:10,940
+They're not totally useless,
+
+118
+00:06:10,940 --> 00:06:14,840
+but they are not particularly
+interesting questions with
+
+119
+00:06:14,840 --> 00:06:19,730
+two ounces or the first
+interesting case of a question.
+
+120
+00:06:19,730 --> 00:06:22,130
+So the simplest
+question we can think
+
+121
+00:06:22,130 --> 00:06:26,210
+of is a question
+that has two ounces.
+
+122
+00:06:26,210 --> 00:06:29,370
+That leads us to binary data.
+
+123
+00:06:29,370 --> 00:06:31,990
+We can represent the two answers
+
+124
+00:06:31,990 --> 00:06:34,240
+is zeros and ones, yeses and nos,
+
+125
+00:06:34,240 --> 00:06:39,055
+all sorts of different ways
+of naming the alternatives.
+
+126
+00:06:39,055 --> 00:06:40,555
+But the key thing is,
+
+127
+00:06:40,555 --> 00:06:42,970
+we will have questions
+that always give
+
+128
+00:06:42,970 --> 00:06:46,660
+an answer and there are
+only two possible answers,
+
+129
+00:06:46,660 --> 00:06:48,880
+yes or no, will use
+
+130
+00:06:48,880 --> 00:06:52,584
+various names and various
+notations for the answers.
+
+131
+00:06:52,584 --> 00:06:55,855
+We can think of a
+tick and across,
+
+132
+00:06:55,855 --> 00:06:57,070
+such as I might put on
+
+133
+00:06:57,070 --> 00:06:59,770
+an exam at the end
+of the semester.
+
+134
+00:06:59,770 --> 00:07:02,650
+We have up and down.
+
+135
+00:07:02,650 --> 00:07:05,005
+We have true and false,
+
+136
+00:07:05,005 --> 00:07:06,925
+which will normally focus on.
+
+137
+00:07:06,925 --> 00:07:09,110
+And then we have some
+symbols that we will use.
+
+138
+00:07:09,110 --> 00:07:12,200
+So we use T for true.
+
+139
+00:07:12,240 --> 00:07:16,510
+And this symbol, which
+is an upside down T
+
+140
+00:07:16,510 --> 00:07:20,635
+for false falsity is
+truth stood on its head.
+
+141
+00:07:20,635 --> 00:07:22,780
+And we give names
+to these symbols.
+
+142
+00:07:22,780 --> 00:07:25,465
+This is top and bottom.
+
+143
+00:07:25,465 --> 00:07:29,020
+And that ordering,
+that top is above
+
+144
+00:07:29,020 --> 00:07:30,460
+bottom will be very
+
+145
+00:07:30,460 --> 00:07:33,205
+useful in our
+investigations later on.
+
+146
+00:07:33,205 --> 00:07:34,750
+When we're thinking like
+
+147
+00:07:34,750 --> 00:07:37,420
+engineers will
+often use zeros and
+
+148
+00:07:37,420 --> 00:07:42,805
+ones 0 for false
+and one for true.
+
+149
+00:07:42,805 --> 00:07:46,780
+But it doesn't really matter
+what the names of these on.
+
+150
+00:07:46,780 --> 00:07:48,880
+It does matter that
+we know which one
+
+151
+00:07:48,880 --> 00:07:51,340
+is true and which one is false.
+
+152
+00:07:51,340 --> 00:07:52,660
+And we swap them over,
+
+153
+00:07:52,660 --> 00:07:54,420
+we change the world entirely.
+
+154
+00:07:54,420 --> 00:07:57,020
+So that's going to take us to
+
+155
+00:07:57,020 --> 00:08:00,320
+an investigation in
+the next video of how
+
+156
+00:08:00,320 --> 00:08:06,470
+we can talk about general
+things using yes-no questions.
+
+157
+00:08:06,470 --> 00:08:09,185
+In this video, we
+introduce the idea of
+
+158
+00:08:09,185 --> 00:08:11,480
+information as a
+kind of thing that
+
+159
+00:08:11,480 --> 00:08:14,375
+is given by the
+answer to a question.
+
+160
+00:08:14,375 --> 00:08:17,180
+Then we looked at
+simple questions
+
+161
+00:08:17,180 --> 00:08:19,040
+which always given out,
+
+162
+00:08:19,040 --> 00:08:24,020
+sir, but only have finite
+in many possible answers.
+
+163
+00:08:24,020 --> 00:08:27,604
+And then we looked at
+questions with binary answers
+
+164
+00:08:27,604 --> 00:08:32,190
+and identified those as the
+simplest possible questions.
