@@ -1,0 +1,1842 @@
+1
+00:00:04,320 --> 00:00:07,945
+Hi, my name's Phil Wadler,
+
+2
+00:00:07,945 --> 00:00:12,340
+and this is the introduction to
+
+3
+00:00:12,340 --> 00:00:14,455
+the introduction to computation,
+
+4
+00:00:14,455 --> 00:00:16,930
+which is Informatics1A.
+
+5
+00:00:16,930 --> 00:00:19,270
+This is Lecture Zero.
+
+6
+00:00:19,270 --> 00:00:20,500
+You'll find out why it's
+
+7
+00:00:20,500 --> 00:00:24,624
+Lecture Zero later in the course.
+
+8
+00:00:24,624 --> 00:00:28,195
+So let's begin by
+talking about who.
+
+9
+00:00:28,195 --> 00:00:30,670
+Hi, I'm Philip Wadler.
+
+10
+00:00:30,670 --> 00:00:31,780
+I'm the lecturer for the
+
+11
+00:00:31,780 --> 00:00:33,670
+functional programming
+part of the course,
+
+12
+00:00:33,670 --> 00:00:36,055
+and I am also the Course Head.
+
+13
+00:00:36,055 --> 00:00:38,605
+There's my email and
+my office number.
+
+14
+00:00:38,605 --> 00:00:40,390
+The email will do you some good,
+
+15
+00:00:40,390 --> 00:00:42,070
+the office number less so.
+
+16
+00:00:42,070 --> 00:00:45,410
+This is Michael Fourman.
+
+17
+00:00:45,410 --> 00:00:47,270
+He's the lecturer
+for the computation
+
+18
+00:00:47,270 --> 00:00:49,385
+and logic part of the course,
+
+19
+00:00:49,385 --> 00:00:51,740
+and he's left a wee message for you.
+
+20
+00:00:51,740 --> 00:00:54,320
+I'm here to blow away
+the cobwebs while
+
+21
+00:00:54,320 --> 00:00:58,970
+preparing for the start of term,
+Fresher's week
+
+22
+00:00:58,970 --> 00:01:01,895
+next week and looking forward
+to seeing you all here.
+
+23
+00:01:01,895 --> 00:01:03,860
+This is Edinburgh.
+
+24
+00:01:03,860 --> 00:01:06,185
+This is Arthur's Seat.
+
+25
+00:01:06,185 --> 00:01:11,570
+Magnificent. 
+Plenty of wind,
+
+26
+00:01:11,570 --> 00:01:13,430
+so the air's clean and plenty of
+
+27
+00:01:13,430 --> 00:01:15,920
+natural vegetation when
+you're outside. Now I'm sorry
+
+28
+00:01:15,920 --> 00:01:18,065
+I won't be inside
+with you for awhile.
+
+29
+00:01:18,065 --> 00:01:20,180
+But we're going to
+do things online
+
+30
+00:01:20,180 --> 00:01:22,970
+and I'm looking
+forward to meeting
+
+31
+00:01:22,970 --> 00:01:29,075
+you all next week.
+Thank you, Michael.
+
+32
+00:01:29,075 --> 00:01:32,390
+This is Claudia Chirita.
+
+33
+00:01:32,390 --> 00:01:34,325
+She is the teaching assistant
+for the course.
+
+34
+00:01:34,325 --> 00:01:36,980
+She's been doing a
+huge amount to help
+
+35
+00:01:36,980 --> 00:01:39,665
+getting everything ready,
+among other things.
+
+36
+00:01:39,665 --> 00:01:41,990
+She's responsible for
+putting up the material on
+
+37
+00:01:41,990 --> 00:01:45,425
+Learn where you will
+be accessing it.
+
+38
+00:01:45,425 --> 00:01:47,975
+This is Don Sannella.
+
+39
+00:01:47,975 --> 00:01:50,990
+He is another professor at
+the University of Edinburgh,
+
+40
+00:01:50,990 --> 00:01:53,240
+just like Michael and myself.
+
+41
+00:01:53,240 --> 00:01:54,710
+He used to teach on
+
+42
+00:01:54,710 --> 00:01:57,020
+this course and he
+spent his sabbatical
+
+43
+00:01:57,020 --> 00:01:58,820
+writing a textbook for you
+
+44
+00:01:58,820 --> 00:02:01,775
+based on the material
+in this course.
+
+45
+00:02:01,775 --> 00:02:05,375
+And we'll have more about
+that textbook a bit later.
+
+46
+00:02:05,375 --> 00:02:07,550
+This is Heather Yorston.
+
+47
+00:02:07,550 --> 00:02:10,250
+She gives a set of
+optional lectures,
+
+48
+00:02:10,250 --> 00:02:12,274
+Mathematics for Computing.
+
+49
+00:02:12,274 --> 00:02:14,735
+These will be available
+pre recorded,
+
+50
+00:02:14,735 --> 00:02:17,165
+just like the lectures
+from Michael and myself.
+
+51
+00:02:17,165 --> 00:02:19,310
+Lectures from Michael and me will
+
+52
+00:02:19,310 --> 00:02:22,700
+be required for you to listen to.
+
+53
+00:02:22,700 --> 00:02:24,590
+Hers are optional in case you
+
+54
+00:02:24,590 --> 00:02:26,765
+want more background
+in mathematics,
+
+55
+00:02:26,765 --> 00:02:28,790
+which is very useful.
+If you don't have
+
+56
+00:02:28,790 --> 00:02:30,320
+a strong background, then
+
+57
+00:02:30,320 --> 00:02:32,405
+these lectures are
+there to help you out.
+
+58
+00:02:32,405 --> 00:02:34,220
+And everybody on the
+course will, of course,
+
+59
+00:02:34,220 --> 00:02:36,170
+help you out with any
+questions you have
+
+60
+00:02:36,170 --> 00:02:39,395
+about mathematics
+or anything else.
+
+61
+00:02:39,395 --> 00:02:42,155
+This is Perdita Stevens.
+
+62
+00:02:42,155 --> 00:02:46,100
+She's the author of a textbook
+'How to Write Good Programs',
+
+63
+00:02:46,100 --> 00:02:47,450
+which among other things,
+
+64
+00:02:47,450 --> 00:02:48,710
+is aimed at this course,
+
+65
+00:02:48,710 --> 00:02:50,645
+so you might want to
+get that textbook.
+
+66
+00:02:50,645 --> 00:02:53,210
+I'll say more about
+textbooks later.
+
+67
+00:02:53,210 --> 00:02:57,065
+She's served as a tutor on
+this course for many years.
+
+68
+00:02:57,065 --> 00:03:00,080
+She's an excellent tutor and
+she's going to be helping
+
+69
+00:03:00,080 --> 00:03:04,715
+me this year to supervise
+the online tutorials.
+
+70
+00:03:04,715 --> 00:03:06,650
+More on that later too.
+
+71
+00:03:06,650 --> 00:03:08,360
+This is Paul Anderson.
+
+72
+00:03:08,360 --> 00:03:10,595
+He's in charge of all of the
+
+73
+00:03:10,595 --> 00:03:13,025
+Informatics1
+first-year courses.
+
+74
+00:03:13,025 --> 00:03:15,840
+So he's in charge
+of the entire year.
+
+75
+00:03:15,850 --> 00:03:18,320
+This is Laura Ambrose.
+
+76
+00:03:18,320 --> 00:03:21,290
+She works in the Informatics
+Teaching Organization
+
+77
+00:03:21,290 --> 00:03:24,230
+and she's responsible
+for the administrative side
+
+78
+00:03:24,230 --> 00:03:26,300
+of the course.
+If you need to do
+
+79
+00:03:26,300 --> 00:03:28,790
+something like change the
+time of your tutorial,
+
+80
+00:03:28,790 --> 00:03:30,905
+she is the person to speak to.
+
+81
+00:03:30,905 --> 00:03:33,260
+So all of these
+emails are here, these
+
+82
+00:03:33,260 --> 00:03:35,495
+slides will be
+online via Learn,
+
+83
+00:03:35,495 --> 00:03:38,690
+so it'll be easy for you to
+get this information.
+
+84
+00:03:38,690 --> 00:03:41,390
+Let me tell you a bit about Where.
+
+85
+00:03:41,390 --> 00:03:43,759
+I mentioned the Informatics
+Teaching Organization.
+
+86
+00:03:43,759 --> 00:03:46,080
+So let's explain things.
+
+87
+00:03:46,390 --> 00:03:49,175
+Here's the Informatics Forum.
+
+88
+00:03:49,175 --> 00:03:52,445
+This is where Michael
+and I have offices.
+
+89
+00:03:52,445 --> 00:03:54,230
+Here's Appleton Tower.
+
+90
+00:03:54,230 --> 00:03:56,870
+This is where the ITO is located.
+
+91
+00:03:56,870 --> 00:03:58,640
+Of course, given circumstances,
+
+92
+00:03:58,640 --> 00:04:00,830
+you might not go to
+these things at all.
+
+93
+00:04:00,830 --> 00:04:02,150
+But I'm showing you where they
+
+94
+00:04:02,150 --> 00:04:03,950
+are in case that's helpful.
+
+95
+00:04:03,950 --> 00:04:05,450
+And another thing
+I'll show you is
+
+96
+00:04:05,450 --> 00:04:07,160
+right here's the general area.
+
+97
+00:04:07,160 --> 00:04:08,870
+Here's the Informatics Forum.
+
+98
+00:04:08,870 --> 00:04:10,325
+Here's Appleton Tower.
+
+99
+00:04:10,325 --> 00:04:13,835
+And up here is Blackwells Bookshop.
+
+100
+00:04:13,835 --> 00:04:15,470
+I just happened to be in there
+
+101
+00:04:15,470 --> 00:04:16,910
+yesterday. So here's Blackwells
+
+102
+00:04:16,910 --> 00:04:20,210
+Bookshop. Bookshops
+are an amazing thing.
+
+103
+00:04:20,210 --> 00:04:23,345
+The web and Amazon
+is killing them off,
+
+104
+00:04:23,345 --> 00:04:25,220
+but there's still
+an amazing thing.
+
+105
+00:04:25,220 --> 00:04:27,920
+Among other things, you
+might want a physical book.
+
+106
+00:04:27,920 --> 00:04:29,750
+If you do, I encourage
+you to get it
+
+107
+00:04:29,750 --> 00:04:32,420
+from Blackwells or some
+other physical bookshop.
+
+108
+00:04:32,420 --> 00:04:35,870
+Of course, you can get it
+online as well if you prefer.
+
+109
+00:04:35,870 --> 00:04:38,960
+And in fact, these are
+the computing shelves
+
+110
+00:04:38,960 --> 00:04:41,195
+at Blackwells. Always
+worth a visit.
+
+111
+00:04:41,195 --> 00:04:44,195
+And part of those shelves,
+here are the textbooks
+
+112
+00:04:44,195 --> 00:04:48,140
+available for the course
+if you want them.
+
+113
+00:04:48,140 --> 00:04:50,240
+And I'll say a bit
+more about that.
+
+114
+00:04:50,240 --> 00:04:52,325
+So what are the textbooks
+for the course?
+
+115
+00:04:52,325 --> 00:04:54,035
+So first and foremost,
+
+116
+00:04:54,035 --> 00:04:58,130
+there is the new textbook
+that Don Sanella has written.
+
+117
+00:04:58,130 --> 00:05:01,820
+There will be forums
+
+118
+00:05:01,820 --> 00:05:04,715
+available for feedback via Learn.
+
+119
+00:05:04,715 --> 00:05:06,560
+Your feedback is very much
+
+120
+00:05:06,560 --> 00:05:08,030
+encouraged to help make this
+
+121
+00:05:08,030 --> 00:05:09,800
+even better for
+students next year.
+
+122
+00:05:09,800 --> 00:05:13,670
+This is our first year trialing
+out this new textbook.
+
+123
+00:05:13,670 --> 00:05:16,730
+There's some other textbooks
+that we've used in the past.
+
+124
+00:05:16,730 --> 00:05:18,290
+One is 'Haskell, the craft of
+
+125
+00:05:18,290 --> 00:05:21,585
+functional programming'
+by Simon Thompson.
+
+126
+00:05:21,585 --> 00:05:26,320
+And another is Learn You a
+Haskell for Great Good.
+
+127
+00:05:26,320 --> 00:05:28,495
+By Miran Lipovaca.
+
+128
+00:05:28,495 --> 00:05:31,750
+They're both available
+as physical books and
+
+129
+00:05:31,750 --> 00:05:35,305
+Learn You a Haskell is also
+available for free online.
+
+130
+00:05:35,305 --> 00:05:37,225
+So you might want
+to check those out.
+
+131
+00:05:37,225 --> 00:05:39,460
+Whatever resource
+is helpful to you,
+
+132
+00:05:39,460 --> 00:05:44,275
+I urge you to get. Textbooks,
+if it's physical cost money.
+
+133
+00:05:44,275 --> 00:05:45,670
+Sometimes they cost, you know,
+
+134
+00:05:45,670 --> 00:05:47,875
+they cost 50 pounds,
+
+135
+00:05:47,875 --> 00:05:50,155
+which seems like a
+huge amount of money.
+
+136
+00:05:50,155 --> 00:05:53,440
+But if you think about what
+
+137
+00:05:53,440 --> 00:05:55,570
+the Scottish government invest in
+
+138
+00:05:55,570 --> 00:05:58,509
+the students here for
+one years course,
+
+139
+00:05:58,509 --> 00:06:00,715
+50 pounds is nothing.
+
+140
+00:06:00,715 --> 00:06:04,375
+If you need to spend 50
+pounds to make good use...
+
+141
+00:06:04,375 --> 00:06:06,670
+of the course, of the opportunities
+
+142
+00:06:06,670 --> 00:06:07,945
+available through the course,
+
+143
+00:06:07,945 --> 00:06:09,520
+that is a bargain.
+
+144
+00:06:09,520 --> 00:06:12,280
+So I encourage you
+to consider it.
+
+145
+00:06:12,280 --> 00:06:15,760
+And if you think it's
+helpful, go ahead and do it.
+
+146
+00:06:15,760 --> 00:06:18,610
+Here's how to write
+good programs.
+
+147
+00:06:18,610 --> 00:06:21,100
+Perdita's book, which
+I mentioned before.
+
+148
+00:06:21,100 --> 00:06:24,295
+This is not a textbook
+for the course per se,
+
+149
+00:06:24,295 --> 00:06:27,430
+but has lots of advice about how
+to write good programs,
+
+150
+00:06:27,430 --> 00:06:29,305
+including Haskell programs,
+
+151
+00:06:29,305 --> 00:06:30,280
+which is what we're going to be
+
+152
+00:06:30,280 --> 00:06:33,115
+doing in the functional
+programming part of the course.
+
+153
+00:06:33,115 --> 00:06:35,110
+And Haskell will also play
+
+154
+00:06:35,110 --> 00:06:36,490
+an important role in
+
+155
+00:06:36,490 --> 00:06:38,980
+the computation and logic
+part of the course.
+
+156
+00:06:38,980 --> 00:06:43,060
+So again, check this book
+out. If it's helpful for you,
+
+157
+00:06:43,060 --> 00:06:45,115
+I encourage you to get it.
+
+158
+00:06:45,115 --> 00:06:48,850
+How? So we're going to have
+
+159
+00:06:48,850 --> 00:06:52,630
+lectures, pre recorded, each week.
+
+160
+00:06:52,630 --> 00:06:54,790
+There will be
+roughly two hours of
+
+161
+00:06:54,790 --> 00:06:58,960
+functional programming
+lectures recorded by myself,
+
+162
+00:06:58,960 --> 00:07:01,810
+two hours of computation
+and logic lectures
+
+163
+00:07:01,810 --> 00:07:03,655
+recorded by Michael Fourman.
+
+164
+00:07:03,655 --> 00:07:06,070
+The functional programming
+lectures are mainly going
+
+165
+00:07:06,070 --> 00:07:08,800
+to be those recorded last year.
+
+166
+00:07:08,800 --> 00:07:13,030
+That's because I think I work
+better with an audience.
+
+167
+00:07:13,030 --> 00:07:14,560
+I think you will enjoy
+
+168
+00:07:14,560 --> 00:07:17,515
+better those things
+recorded with an audience.
+
+169
+00:07:17,515 --> 00:07:19,150
+Michael has decided to take
+
+170
+00:07:19,150 --> 00:07:21,580
+advantage of the new
+world, while your in,
+
+171
+00:07:21,580 --> 00:07:22,390
+and he's going to be doing
+
+172
+00:07:22,390 --> 00:07:24,280
+the computation
+and logic lectures
+
+173
+00:07:24,280 --> 00:07:26,065
+in a different style.
+
+174
+00:07:26,065 --> 00:07:29,565
+We're all learning
+as we move forward.
+
+175
+00:07:29,565 --> 00:07:31,460
+I thought the best
+thing to give you is
+
+176
+00:07:31,460 --> 00:07:33,260
+pre-recorded lectures
+from last year.
+
+177
+00:07:33,260 --> 00:07:35,510
+We'll see how that goes.
+
+178
+00:07:35,510 --> 00:07:37,400
+Everybody on the course,
+
+179
+00:07:37,400 --> 00:07:39,140
+including Michael and myself,
+
+180
+00:07:39,140 --> 00:07:41,120
+will be soliciting feedback
+
+181
+00:07:41,120 --> 00:07:43,550
+from you as the course proceeds.
+
+182
+00:07:43,550 --> 00:07:45,860
+Now, we really want to
+
+183
+00:07:45,860 --> 00:07:48,290
+encourage you to
+view these lectures.
+
+184
+00:07:48,290 --> 00:07:50,090
+So for the FP part of the course,
+
+185
+00:07:50,090 --> 00:07:51,275
+there's going to be a quiz
+
+186
+00:07:51,275 --> 00:07:53,570
+each week based on the lectures.
+
+187
+00:07:53,570 --> 00:07:55,100
+And for the CL part,
+
+188
+00:07:55,100 --> 00:07:56,465
+there's going to be a test
+
+189
+00:07:56,465 --> 00:08:00,590
+every other week based on the
+material in the lectures.
+
+190
+00:08:00,590 --> 00:08:03,890
+But, and this is
+really important:
+
+191
+00:08:03,890 --> 00:08:05,900
+Lectures are not enough.
+
+192
+00:08:05,900 --> 00:08:08,210
+Where you're going to do
+most of the learning.
+
+193
+00:08:08,210 --> 00:08:12,215
+I am sad to say, is not
+through me talking at you,
+
+194
+00:08:12,215 --> 00:08:14,900
+saying wonderful
+bits of knowledge.
+
+195
+00:08:14,900 --> 00:08:17,630
+You learn things by doing them.
+
+196
+00:08:17,630 --> 00:08:20,390
+And your opportunity
+to do things and
+
+197
+00:08:20,390 --> 00:08:23,270
+get feedback is the tutorials.
+
+198
+00:08:23,270 --> 00:08:25,970
+So we're going to have a one hour
+
+199
+00:08:25,970 --> 00:08:29,344
+live tutorial each week for
+functional programming.
+
+200
+00:08:29,344 --> 00:08:32,210
+We're going to have
+a 1.5 hour live
+
+201
+00:08:32,210 --> 00:08:35,825
+tutorial each week for
+computation and logic.
+
+202
+00:08:35,825 --> 00:08:39,365
+These are done in large groups
+and then subgroups of six.
+
+203
+00:08:39,365 --> 00:08:41,870
+These are done in groups of ten.
+
+204
+00:08:41,870 --> 00:08:44,240
+You will have a tutor assigned to
+
+205
+00:08:44,240 --> 00:08:47,090
+you who you can go
+to for feedback.
+
+206
+00:08:47,090 --> 00:08:49,685
+So this is really important.
+
+207
+00:08:49,685 --> 00:08:53,885
+So we've got a tutorial that
+you must do each week for
+
+208
+00:08:53,885 --> 00:08:57,680
+FP, and a tutorial each
+that you must do each week
+
+209
+00:08:57,680 --> 00:09:00,920
+for computation and logic.
+
+210
+00:09:00,920 --> 00:09:04,820
+There are also live
+demonstrations every
+
+211
+00:09:04,820 --> 00:09:09,740
+weekday from just after four
+o'clock to five o'clock.
+
+212
+00:09:09,740 --> 00:09:12,695
+These are not required,
+but they're optional.
+
+213
+00:09:12,695 --> 00:09:14,180
+But again, there's a live
+
+214
+00:09:14,180 --> 00:09:16,505
+demonstrated there who can
+deal with your questions.
+
+215
+00:09:16,505 --> 00:09:18,605
+They're are a good place
+to go to get help.
+
+216
+00:09:18,605 --> 00:09:22,325
+Another good place to go
+to get help is Piazza.
+
+217
+00:09:22,325 --> 00:09:24,890
+You can put up questions
+at anytime and
+
+218
+00:09:24,890 --> 00:09:26,540
+any other student and
+
+219
+00:09:26,540 --> 00:09:29,180
+the staff will put up 
+answers to those questions.
+
+220
+00:09:29,180 --> 00:09:32,300
+It's a very effective
+means of getting feedback.
+
+221
+00:09:32,300 --> 00:09:35,480
+Another very important
+effective means of getting
+
+222
+00:09:35,480 --> 00:09:39,455
+feedback is your
+colleagues, your peers.
+
+223
+00:09:39,455 --> 00:09:41,690
+There is InfPALS,
+
+224
+00:09:41,690 --> 00:09:43,640
+which has people in
+
+225
+00:09:43,640 --> 00:09:45,830
+successive years who've
+been through this course.
+
+226
+00:09:45,830 --> 00:09:47,285
+You can go to them for feedback
+
+227
+00:09:47,285 --> 00:09:49,790
+or just make friends
+on the course,
+
+228
+00:09:49,790 --> 00:09:51,125
+talk to other people,
+
+229
+00:09:51,125 --> 00:09:52,670
+work with other people.
+
+230
+00:09:52,670 --> 00:09:56,390
+It's very much encouraged
+that you use every resource
+
+231
+00:09:56,390 --> 00:09:58,550
+available from the staff
+
+232
+00:09:58,550 --> 00:10:01,800
+through to other
+students to learn.
+
+233
+00:10:02,470 --> 00:10:06,380
+It's important that
+you do the work.
+
+234
+00:10:06,380 --> 00:10:10,160
+Attendance at tutorials
+is compulsory,
+
+235
+00:10:10,160 --> 00:10:11,735
+it is not optional.
+
+236
+00:10:11,735 --> 00:10:14,975
+You must listen to the
+lectures each week,
+
+237
+00:10:14,975 --> 00:10:16,925
+before the tutorial.
+
+238
+00:10:16,925 --> 00:10:20,090
+You must do the assigned
+reading each week
+
+239
+00:10:20,090 --> 00:10:23,629
+that will be available on
+Learn before the tutorial.
+
+240
+00:10:23,629 --> 00:10:26,765
+You must do the
+tutorial exercises
+
+241
+00:10:26,765 --> 00:10:30,630
+each week before the tutorial.
+
+242
+00:10:30,970 --> 00:10:34,985
+And that is so important
+that if I was live,
+
+243
+00:10:34,985 --> 00:10:37,640
+I would be jumping
+up and down to tell
+
+244
+00:10:37,640 --> 00:10:40,565
+you how important that
+is, but I'm not live,
+
+245
+00:10:40,565 --> 00:10:42,290
+I can't really jump up and down.
+
+246
+00:10:42,290 --> 00:10:43,625
+So instead of that,
+
+247
+00:10:43,625 --> 00:10:49,170
+what I've got here is a
+little dancing teddy bear.
+
+248
+00:10:50,370 --> 00:10:53,905
+And he is dancing and
+jumping up and down.
+
+249
+00:10:53,905 --> 00:10:57,130
+Very angry to tell you just how
+
+250
+00:10:57,130 --> 00:11:00,385
+important it is that
+you do the work.
+
+251
+00:11:00,385 --> 00:11:02,470
+So I'm just going to repeat this.
+
+252
+00:11:02,470 --> 00:11:04,870
+You wouldn't think I
+need to repeat it.
+
+253
+00:11:04,870 --> 00:11:08,020
+But experience shows students
+believe that they can get
+
+254
+00:11:08,020 --> 00:11:10,975
+away for some
+reason without doing this,
+
+255
+00:11:10,975 --> 00:11:15,460
+I already mentioned just
+how much money is
+
+256
+00:11:15,460 --> 00:11:17,710
+given by the Scottish government
+
+257
+00:11:17,710 --> 00:11:20,455
+to ensure these resources
+are available to you.
+
+258
+00:11:20,455 --> 00:11:23,350
+So really it's very
+important that you use them.
+
+259
+00:11:23,350 --> 00:11:24,550
+You must listen to
+
+260
+00:11:24,550 --> 00:11:26,620
+the lectures each week
+before the tutorial.
+
+261
+00:11:26,620 --> 00:11:28,720
+You must do the assigned reading
+
+262
+00:11:28,720 --> 00:11:30,775
+each week before the tutorial,
+
+263
+00:11:30,775 --> 00:11:33,785
+you must do the tutorial exercises
+
+264
+00:11:33,785 --> 00:11:37,079
+each week before the tutorial.
+
+265
+00:11:37,870 --> 00:11:40,820
+You may collaborate.
+
+266
+00:11:40,820 --> 00:11:42,500
+When you are doing these things,
+
+267
+00:11:42,500 --> 00:11:44,345
+especially this
+tutorial exercises,
+
+268
+00:11:44,345 --> 00:11:45,800
+you're encouraged to collaborate.
+
+269
+00:11:45,800 --> 00:11:48,575
+As I said, other
+students are resource.
+
+270
+00:11:48,575 --> 00:11:51,620
+It's all too easy if you're
+working with another student
+
+271
+00:11:51,620 --> 00:11:54,995
+who's stronger than you to
+let them do all the work.
+
+272
+00:11:54,995 --> 00:11:57,830
+But you have to submit
+your own answers.
+
+273
+00:11:57,830 --> 00:12:00,815
+You are responsible for
+knowing the material.
+
+274
+00:12:00,815 --> 00:12:03,425
+If you copy somebody
+else's work directly,
+
+275
+00:12:03,425 --> 00:12:06,740
+that is cheating. Don't do that.
+
+276
+00:12:06,740 --> 00:12:12,290
+But working with other students
+to learn, that's fine.
+
+277
+00:12:12,290 --> 00:12:15,110
+And again, let me
+state the obvious.
+
+278
+00:12:15,110 --> 00:12:18,380
+You will fail the course
+if you don't do the work.
+
+279
+00:12:18,380 --> 00:12:21,140
+That's in italics
+to emphasize it.
+
+280
+00:12:21,140 --> 00:12:26,160
+And here's the teddy bear
+to emphasize that as well.
+
+281
+00:12:26,770 --> 00:12:30,635
+Now, to encourage you to do this,
+
+282
+00:12:30,635 --> 00:12:33,140
+the weave, all of
+
+283
+00:12:33,140 --> 00:12:36,095
+the work that I just mentioned
+is going to be assessed.
+
+284
+00:12:36,095 --> 00:12:37,550
+So you have a reason to do it.
+
+285
+00:12:37,550 --> 00:12:40,475
+You know that you're getting
+points for doing it.
+
+286
+00:12:40,475 --> 00:12:42,635
+So there's a 100
+marks for the course.
+
+287
+00:12:42,635 --> 00:12:45,425
+50 of those are for
+functional programming,
+
+288
+00:12:45,425 --> 00:12:48,770
+50 of those are for
+computation and logic.
+
+289
+00:12:48,770 --> 00:12:50,885
+To pass the course,
+
+290
+00:12:50,885 --> 00:12:54,095
+you must pass each
+of those separately.
+
+291
+00:12:54,095 --> 00:12:59,480
+You must get 20 out of 50 marks
+in each of those to pass.
+
+292
+00:12:59,480 --> 00:13:02,210
+So here, the 50 marks for FP,
+
+293
+00:13:02,210 --> 00:13:05,329
+there's a quiz each week worth 1 piint.
+
+294
+00:13:05,329 --> 00:13:07,370
+There's a tutorial each week,
+
+295
+00:13:07,370 --> 00:13:11,435
+which will be marked by your
+tutor worth four points.
+
+296
+00:13:11,435 --> 00:13:16,940
+There is a mid-term
+also worth four points.
+
+297
+00:13:16,940 --> 00:13:17,960
+It will be essentially like
+
+298
+00:13:17,960 --> 00:13:19,790
+a tutorial and marked
+by your tutor.
+
+299
+00:13:19,790 --> 00:13:22,220
+And there will be a final, again,
+
+300
+00:13:22,220 --> 00:13:24,920
+it's four points, 
+essentially like a tutorial.
+
+301
+00:13:24,920 --> 00:13:28,355
+The midterm and
+the final are there.
+
+302
+00:13:28,355 --> 00:13:30,170
+You can see they're a relatively
+
+303
+00:13:30,170 --> 00:13:31,790
+small part of the assessment,
+
+304
+00:13:31,790 --> 00:13:34,039
+but they are there to
+give you feedback.
+
+305
+00:13:34,039 --> 00:13:36,410
+As I mentioned, you
+might be working with
+
+306
+00:13:36,410 --> 00:13:39,185
+other students to
+do the tutorials.
+
+307
+00:13:39,185 --> 00:13:41,090
+Don't work with other students
+
+308
+00:13:41,090 --> 00:13:43,085
+to do the midterm or the final,
+
+309
+00:13:43,085 --> 00:13:45,965
+that will give you some feedback
+on what you've learned.
+
+310
+00:13:45,965 --> 00:13:47,540
+Now if you add these up,
+
+311
+00:13:47,540 --> 00:13:50,435
+you see we've got 40 points,
+
+312
+00:13:50,435 --> 00:13:51,605
+sorry, ten points here.
+
+313
+00:13:51,605 --> 00:13:56,225
+One times 10, 4 times ten
+is 40, plus 10 is 50.
+
+314
+00:13:56,225 --> 00:14:00,710
+But then we've got another
+four points for the midterm,
+
+315
+00:14:00,710 --> 00:14:02,150
+four points for the final.
+
+316
+00:14:02,150 --> 00:14:05,435
+But of these 12 items,
+
+317
+00:14:05,435 --> 00:14:09,440
+you will be scored on
+the best 10 of 12.
+
+318
+00:14:09,440 --> 00:14:11,990
+So if you miss a
+tutorial one week
+
+319
+00:14:11,990 --> 00:14:14,705
+or do very poorly on
+something for some reason,
+
+320
+00:14:14,705 --> 00:14:17,195
+that won't count
+as long as you do
+
+321
+00:14:17,195 --> 00:14:20,550
+well enough on the rest.
+
+322
+00:14:21,070 --> 00:14:23,690
+For computation and logic,
+
+323
+00:14:23,690 --> 00:14:25,685
+the assessment is
+a bit different.
+
+324
+00:14:25,685 --> 00:14:29,585
+There is a test every other
+week worth four points,
+
+325
+00:14:29,585 --> 00:14:32,840
+and a tutorial each
+week worth two points,
+
+326
+00:14:32,840 --> 00:14:34,910
+and then a final
+worth ten points,
+
+327
+00:14:34,910 --> 00:14:40,890
+and those add up to
+exactly 50. I should say,
+
+328
+00:14:40,990 --> 00:14:43,820
+and then on Learn,
+
+329
+00:14:43,820 --> 00:14:45,980
+so all the resources that you
+
+330
+00:14:45,980 --> 00:14:47,525
+need will be published on Learn,
+
+331
+00:14:47,525 --> 00:14:49,460
+including the video that
+
+332
+00:14:49,460 --> 00:14:51,095
+you're watching right now for me,
+
+333
+00:14:51,095 --> 00:14:53,390
+all of our pre recorded
+video lectures
+
+334
+00:14:53,390 --> 00:14:54,950
+will be available on Learn.
+
+335
+00:14:54,950 --> 00:14:56,780
+All the slides will
+be available on
+
+336
+00:14:56,780 --> 00:14:58,535
+Learn, all the
+reading assignments,
+
+337
+00:14:58,535 --> 00:15:00,634
+all the tutorial assignments.
+
+338
+00:15:00,634 --> 00:15:02,885
+Once they're done,
+all the solutions,
+
+339
+00:15:02,885 --> 00:15:05,525
+everything will be
+put up on Learn.
+
+340
+00:15:05,525 --> 00:15:07,280
+There'll be a programming
+competition for
+
+341
+00:15:07,280 --> 00:15:09,350
+FP later this year that will be
+
+342
+00:15:09,350 --> 00:15:10,970
+posted on Learn. Everything you
+
+343
+00:15:10,970 --> 00:15:13,505
+need, the link to the piazza site,
+
+344
+00:15:13,505 --> 00:15:17,300
+everything will be
+available on Learn.
+
+345
+00:15:17,300 --> 00:15:21,755
+Let me say a word about When.
+
+346
+00:15:21,755 --> 00:15:25,490
+So this is the actual timetable.
+
+347
+00:15:25,490 --> 00:15:27,230
+It actually has lectures as
+
+348
+00:15:27,230 --> 00:15:28,985
+specific time in it right now.
+
+349
+00:15:28,985 --> 00:15:30,620
+We're going to remove
+that because you
+
+350
+00:15:30,620 --> 00:15:33,170
+can see the Lectures
+anytime you want.
+
+351
+00:15:33,170 --> 00:15:34,670
+Very important, right?
+
+352
+00:15:34,670 --> 00:15:37,490
+These are the demonstrations
+which I mentioned,
+
+353
+00:15:37,490 --> 00:15:42,335
+which will be every weekday
+four o'clock to five o'clock,
+
+354
+00:15:42,335 --> 00:15:44,810
+live, great place
+to get feedback.
+
+355
+00:15:44,810 --> 00:15:47,660
+There will also be office hours.
+
+356
+00:15:47,660 --> 00:15:50,915
+Michael will have one
+office hour each week.
+
+357
+00:15:50,915 --> 00:15:53,045
+I will have an office
+hour each week.
+
+358
+00:15:53,045 --> 00:15:54,920
+When those hours to be decided,
+
+359
+00:15:54,920 --> 00:15:56,345
+that will be posted on Learn.
+
+360
+00:15:56,345 --> 00:15:58,025
+A lot of things are
+probably going to
+
+361
+00:15:58,025 --> 00:16:00,815
+change as the course
+goes forward.
+
+362
+00:16:00,815 --> 00:16:03,065
+Because this is new to all of us.
+
+363
+00:16:03,065 --> 00:16:04,910
+And we're hoping to
+get feedback from
+
+364
+00:16:04,910 --> 00:16:07,415
+you on what works
+and what doesn't.
+
+365
+00:16:07,415 --> 00:16:09,410
+Piazza and e-mail will be
+
+366
+00:16:09,410 --> 00:16:12,270
+great ways of delivering
+that feedback.
+
+367
+00:16:12,610 --> 00:16:15,095
+So things will change.
+
+368
+00:16:15,095 --> 00:16:16,475
+Again, it will be very important.
+
+369
+00:16:16,475 --> 00:16:18,260
+Look at Learn, that
+we'll always have the
+
+370
+00:16:18,260 --> 00:16:21,630
+most up to date information.
+
+371
+00:16:22,270 --> 00:16:25,970
+One thing I should mention
+about the tutorials.
+
+372
+00:16:25,970 --> 00:16:28,220
+You can see that
+the computation and
+
+373
+00:16:28,220 --> 00:16:31,235
+logic tutorials will be near
+the beginning of the week,
+
+374
+00:16:31,235 --> 00:16:32,990
+probably all on Monday.
+
+375
+00:16:32,990 --> 00:16:35,480
+The FP tutorials
+will all be near
+
+376
+00:16:35,480 --> 00:16:38,720
+the end of the week,
+probably on Friday.
+
+377
+00:16:38,720 --> 00:16:42,365
+I believe what we're going
+to do is have a Wednesday
+
+378
+00:16:42,365 --> 00:16:44,720
+four o'clock deadline for the
+
+379
+00:16:44,720 --> 00:16:48,020
+FP tutorials on Friday.
+
+380
+00:16:48,020 --> 00:16:50,855
+And that will give your
+tutors time to mark them.
+
+381
+00:16:50,855 --> 00:16:54,695
+Again, this will all be on Learn.
+
+382
+00:16:54,695 --> 00:16:59,855
+And the CL work will
+also have a deadline,
+
+383
+00:16:59,855 --> 00:17:01,385
+but that's yet to be decided.
+
+384
+00:17:01,385 --> 00:17:03,575
+It will be on Learn.
+
+385
+00:17:03,575 --> 00:17:07,730
+Finally, Why. Right, you
+
+386
+00:17:07,730 --> 00:17:10,745
+want to know a little bit about
+why we're doing all this.
+
+387
+00:17:10,745 --> 00:17:12,620
+But I'm not going to cover that
+
+388
+00:17:12,620 --> 00:17:14,765
+in the introductory lecture.
+
+389
+00:17:14,765 --> 00:17:18,560
+I, Michael and I will
+be covering the Why of
+
+390
+00:17:18,560 --> 00:17:20,675
+functional programming
+part of the course
+
+391
+00:17:20,675 --> 00:17:23,750
+and the computation and
+logic part of the course
+
+392
+00:17:23,750 --> 00:17:26,315
+at the beginning of
+our first lectures,
+
+393
+00:17:26,315 --> 00:17:28,670
+which you will see,
+
+394
+00:17:28,670 --> 00:17:31,115
+which will be available
+to you online.
+
+395
+00:17:31,115 --> 00:17:34,220
+But I will just give you a hint.
+
+396
+00:17:34,220 --> 00:17:37,610
+It has something to do
+with the lambda calculus.
+
+397
+00:17:37,610 --> 00:17:41,075
+Here is my fuzzy lambda
+that was made as a little
+
+398
+00:17:41,075 --> 00:17:43,670
+warm, fuzzy toy for
+me by my daughter.
+
+399
+00:17:43,670 --> 00:17:45,725
+And you'll learn more
+about fuzzy lambdas
+
+400
+00:17:45,725 --> 00:17:47,345
+later in the course.
+
+401
+00:17:47,345 --> 00:17:50,735
+That's it. That's the
+introduction completed.
+
+402
+00:17:50,735 --> 00:17:57,170
+Welcome! to Introduction to
+Computation Informatics1A.
+
+403
+00:17:57,170 --> 00:17:59,240
+This has been the
+Introduction to
+
+404
+00:17:59,240 --> 00:18:04,350
+the Introduction to
+Computation. Go well.
+
